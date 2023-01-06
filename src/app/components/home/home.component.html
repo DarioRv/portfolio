@@ -1,0 +1,19 @@
+<section class="inicio container-fluid d-flex flex-column justify-content-center align-items-center" id="top">
+    <h1 class="h1">{{portfolio.name}}</h1>
+    <p>{{portfolio.position}}</p>
+    <span>{{portfolio.description}}</span>
+    <div class="contacto d-flex flex-column flex-lg-row gap-3">
+        <div class="telefono">
+            <i class="bi bi-telephone-fill"></i>
+            <span>{{portfolio.contact.tel}}</span>
+        </div>
+        <div class="email">
+            <i class="bi bi-envelope-fill"></i>
+            <span><a [href]="portfolio.contact.email.url">{{portfolio.contact.email.address}}</a></span>
+        </div>
+        <div class="linkedin">
+            <i class="bi bi-linkedin"></i>
+            <span><a [href]="portfolio.contact.linkedin.url">{{portfolio.contact.linkedin.alias}}</a></span>
+        </div>
+    </div>
+</section>

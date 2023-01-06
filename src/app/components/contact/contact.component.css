@@ -1,0 +1,25 @@
+.contacto .medios{
+    font-size: 24px;
+    color: #333;
+}
+.contacto .medios a{
+    color: #333;
+}
+.contacto .medios i{
+    margin-right: 5px;
+}
+.contacto .medios .linkedin i{
+    color: #0e76a8;
+}
+.contacto .medios .email i{
+    color: #7e7e7e;
+}
+.contacto .medios .telefono i{
+    color: #000;
+}
+.contacto .medios .github i{
+    color: #333;
+}
+.contacto .medios .localidad i{
+    color: #ff000f;
+}

@@ -1,0 +1,117 @@
+{
+    "name": "Darío Vidal",
+    "position": "Full Stack Developer",
+    "description": "Front End | Back End",
+    "contact": {
+        "tel": "(+54) 3885142501",
+        "email": {"address": "dariorvidal.27@gmail.com", "url": "mailto:dariorvidal@gmail.com"},
+        "linkedin": {"alias": "Darío Vidal", "url": "https://www.linkedin.com/in/dariovidal9/"}
+    },
+    "about": "",
+    "laboralExperience": [
+        {
+            "companyImage": "bg.png",
+            "companyName": "EMPRESA",
+            "position": "Puesto",
+            "description": "Tareas, roles, detalles y otras cosas."
+        },
+        {
+            "companyImage": "bg.png",
+            "companyName": "EMPRESA",
+            "position": "Puesto",
+            "description": "Tareas, roles, detalles y otras cosas."
+        },
+        {
+            "companyImage": "bg.png",
+            "companyName": "EMPRESA",
+            "position": "Puesto",
+            "description": "Tareas, roles, detalles y otras cosas."
+        }
+    ],
+    "education": [
+        {
+            "institutionImage": "etp.png",
+            "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
+            "shortName": "ETP Nº1",
+            "certificate": "Técnico Informático Profesional y Personal",
+            "date": "2016 - 2021",
+            "observations": "Participación en olimpiadas de programación."
+        },
+        {
+            "institutionImage": "fi-unju.png",
+            "institutionName": "Facultad de Ingeniería - Universidad Nacional de Jujuy",
+            "shortName": "FI - UNJu",
+            "certificate": "Analista Programador Universitario",
+            "date": "2022 - Actualidad",
+            "observations": "Participación en olimpiadas de programación."
+        },
+        {
+            "institutionImage": "coderhouse.png",
+            "institutionName": "CoderHouse - Plataforma eLearning",
+            "shortName": "Coder",
+            "certificate": "Desarrollo Web - HTML | CSS | SASS | JS",
+            "date": "2022",
+            "observations": ""
+        }
+    ],
+    "skills":[
+        {
+            "name": "html5",
+            "image": "html.png"
+        },
+        {
+            "name": "css3",
+            "image": "css.png"
+        },
+        {
+            "name": "javascript",
+            "image": "js.png"
+        },
+        {
+            "name": "bootstrap",
+            "image": "bootstrap.png"
+        },
+        {
+            "name": "tailwind",
+            "image": "tailwind.png"
+        },
+        {
+            "name": "python",
+            "image": "python.png"
+        },
+        {
+            "name": "php",
+            "image": "php.png"
+        },
+        {
+            "name": "git",
+            "image": "git.png"
+        },
+        {
+            "name": "github",
+            "image": "github.png"
+        },
+        {
+            "name": "cpp",
+            "image": "cpp.png"
+        }, 
+        {
+            "name": "figma",
+            "image": "figma.png"
+        }
+    ],
+    "projects": [
+        {
+            "projectName": "pasteleria ideal",
+            "date": "2022",
+            "description": "Tareas, roles, detalles y otras cosas.",
+            "url": "https://pasteleriaidealjs.netlify.app/index.html"
+        },
+        {
+            "projectName": "pronostico de clima",
+            "date": "2022",
+            "description": "Tareas, roles, detalles y otras cosas.",
+            "url": "https://dariorv.github.io/Clima/"
+        }
+    ]
+}

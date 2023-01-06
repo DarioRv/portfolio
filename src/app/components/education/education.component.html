@@ -1,0 +1,12 @@
+<section class="estudios container-fluid d-flex flex-column align-items-center" id="estudios">
+    <h2 class="h2">Estudios</h2>
+    <div *ngFor="let item of portfolio.education" class="formacion">
+        <div class="instituto d-flex align-items-center gap-3">
+            <img [src]="'../../../assets/images/' + item.institutionImage" [alt]="item.shortName" class="logo img-fluid">
+            <h3>{{item.institutionName}}</h3>
+        </div>
+        <h4 class="text-muted">{{item.certificate}}</h4>
+        <span class="text-muted">{{item.date}}</span>
+        <div class="observaciones">{{item.observations}}</div>
+    </div>
+</section>

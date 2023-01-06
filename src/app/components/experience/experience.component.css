@@ -1,0 +1,15 @@
+.experiencia .item{
+    width: 70%;
+    margin: 40px 0;
+    border-bottom: 2px solid #dbdbdb;
+}
+.experiencia .item .logo-empresa{
+    width: 150px;
+    height: 50px;
+}
+.experiencia .item .logo-empresa img{
+    border-radius: 5px;
+}
+.experiencia .item .detalles p{
+    text-align: left;
+}

@@ -1,0 +1,6 @@
+<section class="habilidades container-fluid d-flex flex-column align-items-center" id="habilidades">
+    <h2 class="h2">Habilidades</h2>
+    <div class="skills d-flex flex-wrap justify-content-center gap-4">
+        <div *ngFor="let skill of portfolio.skills" class="skill d-flex justify-content-center align-items-center"><img [src]="'../../../assets/images/' + skill.image" [alt]="skill.name + 'logo'" class="img-fluid"></div>
+    </div>
+</section>

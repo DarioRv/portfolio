@@ -1,0 +1,19 @@
+.estudios .formacion{
+    width: fit-content;
+    margin: 20px 0;
+    border: 4px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+.estudios .formacion:hover{
+    border-color: #39aca3;
+}
+.estudios .formacion .instituto .logo{
+    width: 50px;
+}
+.estudios .formacion h4{
+    margin: 10px 0;
+}
+.estudios .formacion span{
+    font-weight: bold;
+}

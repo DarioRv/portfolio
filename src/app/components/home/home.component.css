@@ -1,0 +1,21 @@
+.inicio{
+    height: 100vh;
+    background-image: url("../../../assets/images/bg.png");
+    color: #fff;
+}
+.inicio h1{
+    font-size: 76px;
+}
+.inicio p{
+    font-size: 36px;
+    margin: 0;
+}
+.inicio .contacto{
+    margin: 20px 0;
+}
+.inicio .contacto span a{
+    color: #fff;
+}
+.inicio .contacto span{
+    font-weight: bold;
+}
