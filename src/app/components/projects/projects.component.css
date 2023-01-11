@@ -1,5 +1,5 @@
 .proyectos .proyecto{
-    width: 90%;
+    width: 80%;
     margin: 40px 0;
     background-color: #eeeeee;
     border-radius: 10px;
@@ -17,4 +17,41 @@
 }
 .proyectos .proyecto .detalles p{
     text-align: left;
+}
+.proyectos .proyecto .edit-buttons button{
+    padding: 5px;
+    border-radius: 5px;
+}
+.proyectos .proyecto .edit-buttons button:first-child{
+    border: 2px solid #4e8cff;
+    color: #4e8cff;
+    transition: .2s all;
+}
+.proyectos .proyecto .edit-buttons button:first-child:hover{
+    background-color: #4e8cff;
+    color: #fff;
+    transition: .2s all;
+}
+.proyectos .proyecto .edit-buttons button:last-child{
+    border: 2px solid #fa2d2d;
+    color:#fa2d2d;
+}
+.proyectos .proyecto .edit-buttons button:last-child:hover{
+    background-color: #fa2d2d;
+    color: #fff;
+}
+.proyectos .add-section{
+    width: 80%;
+    border: 2px dashed #6c757d;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: #6c757d;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.proyectos .add-section:hover{
+    border-color: #4e8cff;
+    color: #4e8cff;
+    cursor: pointer;
 }

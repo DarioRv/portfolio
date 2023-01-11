@@ -1,0 +1,10 @@
+<div class="container-fluid container-form flex-column align-items-center justify-content-center">
+    <form class="shadow-lg" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+        <label for="user">Correo</label>
+        <input type="text" name="email" id="email" placeholder="Tu email" autocomplete="off" ngModel>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" placeholder="Tu contraseña" ngModel>
+        <input type="submit" value="INGRESAR">
+        <input type="button" value="CANCELAR" routerLink="">
+    </form>
+</div>

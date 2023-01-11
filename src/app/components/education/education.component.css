@@ -1,12 +1,9 @@
 .estudios .formacion{
-    width: fit-content;
+    width: 80%;
     margin: 20px 0;
     border: 4px solid #dbdbdb;
     border-radius: 5px;
     padding: 20px 10px;
-}
-.estudios .formacion:hover{
-    border-color: #39aca3;
 }
 .estudios .formacion .instituto .logo{
     width: 50px;
@@ -16,4 +13,40 @@
 }
 .estudios .formacion span{
     font-weight: bold;
+}
+.estudios .formacion .edit-buttons button{
+    padding: 5px;
+    border-radius: 5px;
+}
+.estudios .formacion .edit-buttons button:first-child{
+    border: 2px solid #4e8cff;
+    color: #4e8cff;
+    transition: .2s all;
+}
+.estudios .formacion .edit-buttons button:first-child:hover{
+    background-color: #4e8cff;
+    color: #fff;
+    transition: .2s all;
+}
+.estudios .formacion .edit-buttons button:last-child{
+    border: 2px solid #fa2d2d;
+    color:#fa2d2d;
+}
+.estudios .formacion .edit-buttons button:last-child:hover{
+    background-color: #fa2d2d;
+    color: #fff;
+}
+.estudios .add-section{
+    width: 80%;
+    border: 2px dashed #6c757d;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: #6c757d;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.estudios .add-section:hover{
+    border-color: #4e8cff;
+    color: #4e8cff;
 }

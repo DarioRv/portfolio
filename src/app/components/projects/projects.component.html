@@ -1,14 +1,19 @@
 <section class="proyectos container-fluid d-flex flex-column align-items-center" id="proyectos">
     <h2 class="h2">Proyectos</h2>
-    <div *ngFor="let project of portfolio.projects" class="proyecto d-flex flex-column flex-lg-row gap-5 shadow">
-        <div class="muestra">
-            <iframe [src]="project.url"></iframe>
-        </div>
+    <div *ngFor="let project of projects" class="proyecto d-flex flex-column flex-lg-row gap-5 shadow">
+        <!-- <div class="muestra">
+            <iframe [src]="project.url | safe"></iframe>
+        </div> -->
         <div class="detalles">
             <h3>{{project.projectName | uppercase}}</h3>
             <h4 class="text-muted">{{project.date}}</h4>
             <p>{{project.description}}</p>
             <a [href]="project.url" target="_blank">Ir al sitio <i class="bi bi-link-45deg"></i></a>
         </div>
+        <div class="edit-buttons d-flex flex-column gap-2" *ngIf="authService.logIn()">
+            <button><i class="bi bi-pencil-fill"></i></button>
+            <button><i class="bi bi-trash3-fill"></i></button>
+        </div>
     </div>
+    <div class="add-section" *ngIf="authService.logIn()"><i class="bi bi-plus-circle-fill"></i></div>
 </section>

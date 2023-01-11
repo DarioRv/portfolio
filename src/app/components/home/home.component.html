@@ -1,19 +1,22 @@
 <section class="inicio container-fluid d-flex flex-column justify-content-center align-items-center" id="top">
-    <h1 class="h1">{{portfolio.name}}</h1>
-    <p>{{portfolio.position}}</p>
-    <span>{{portfolio.description}}</span>
+    <h1 class="h1">{{name}}</h1>
+    <p>{{position}}</p>
+    <span>{{description}}</span>
     <div class="contacto d-flex flex-column flex-lg-row gap-3">
-        <div class="telefono">
+        <div class="telefono d-flex gap-1">
             <i class="bi bi-telephone-fill"></i>
-            <span>{{portfolio.contact.tel}}</span>
+            <span>{{tel}}</span>
         </div>
-        <div class="email">
+        <div class="email d-flex gap-1">
             <i class="bi bi-envelope-fill"></i>
-            <span><a [href]="portfolio.contact.email.url">{{portfolio.contact.email.address}}</a></span>
+            <span><a [href]="emailUrl">{{emailAddress}}</a></span>
         </div>
-        <div class="linkedin">
+        <div class="linkedin d-flex gap-1">
             <i class="bi bi-linkedin"></i>
-            <span><a [href]="portfolio.contact.linkedin.url">{{portfolio.contact.linkedin.alias}}</a></span>
+            <span><a [href]="linkedinUrl">{{linkedinAlias}}</a></span>
         </div>
+    </div>
+    <div class="github">
+        <a href="https://github.com/DarioRv" target="_blank"><button><i class="bi bi-github"></i> Visita mi GitHub</button></a>
     </div>
 </section>

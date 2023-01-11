@@ -10,21 +10,24 @@
     "about": "",
     "laboralExperience": [
         {
-            "companyImage": "bg.png",
-            "companyName": "EMPRESA",
-            "position": "Puesto",
+            "companyImage": "ml.png",
+            "companyName": "mercado libre",
+            "position": "Front End Developer",
+            "year": "2022 - 2023",
             "description": "Tareas, roles, detalles y otras cosas."
         },
         {
-            "companyImage": "bg.png",
-            "companyName": "EMPRESA",
-            "position": "Puesto",
+            "companyImage": "acc.png",
+            "companyName": "accenture",
+            "position": "Back End Developer",
+            "year": "2018 - 2022",
             "description": "Tareas, roles, detalles y otras cosas."
         },
         {
-            "companyImage": "bg.png",
-            "companyName": "EMPRESA",
-            "position": "Puesto",
+            "companyImage": "fc.png",
+            "companyName": "facebook",
+            "position": "Data Engineer",
+            "year": "2015 - 2017",
             "description": "Tareas, roles, detalles y otras cosas."
         }
     ],

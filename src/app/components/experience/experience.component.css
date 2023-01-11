@@ -1,5 +1,5 @@
 .experiencia .item{
-    width: 70%;
+    width: 80%;
     margin: 40px 0;
     border-bottom: 2px solid #dbdbdb;
 }
@@ -12,4 +12,47 @@
 }
 .experiencia .item .detalles p{
     text-align: left;
+}
+.experiencia .item .año{
+    width: 50%;
+    font-size: 36px;
+    color: #6c757d;
+    font-weight: bold;
+}
+.experiencia .item .edit-buttons button{
+    padding: 5px;
+    border-radius: 5px;
+}
+.experiencia .item .edit-buttons button:first-child{
+    border: 2px solid #4e8cff;
+    color: #4e8cff;
+    transition: .2s all;
+}
+.experiencia .item .edit-buttons button:first-child:hover{
+    background-color: #4e8cff;
+    color: #fff;
+    transition: .2s all;
+}
+.experiencia .item .edit-buttons button:last-child{
+    border: 2px solid #fa2d2d;
+    color:#fa2d2d;
+}
+.experiencia .item .edit-buttons button:last-child:hover{
+    background-color: #fa2d2d;
+    color: #fff;
+}
+.experiencia .add-section{
+    width: 80%;
+    border: 2px dashed #6c757d;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: #6c757d;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.experiencia .add-section:hover{
+    border-color: #4e8cff;
+    color: #4e8cff;
+    cursor: pointer;
 }

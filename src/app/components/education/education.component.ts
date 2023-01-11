@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 
 @Component({
@@ -7,13 +8,20 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 	styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-    portfolio: any;
+    education: any;
 
-	constructor(private portfolioData: PortfolioDataService){}
+	constructor(private portfolioData: PortfolioDataService, public authService: AuthService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
-			this.portfolio = data;
+			this.education = data.education;
 		});
+	}
+
+	email = "";
+	password = "";
+
+	Login(){
+		this.authService.login(this.email, this.password);
 	}
 }
