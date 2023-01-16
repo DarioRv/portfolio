@@ -12,9 +12,11 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { ErrorComponent } from './components/error/error.component';
 const routes: Routes = [
 	{path: "login", component: LoginComponent},
-	{path: "", redirectTo: "", pathMatch: "full"}
+	{path: "", redirectTo: "", pathMatch: "full"},
+	{path: "**", component: ErrorComponent}
 ];
 
 @NgModule({

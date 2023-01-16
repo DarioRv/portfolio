@@ -1,0 +1,10 @@
+button:last-child{
+    border: 2px solid #fa2d2d;
+    color:#fa2d2d;
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #fa2d2d;
+    color: #fff;
+}

@@ -33,20 +33,12 @@
     ],
     "education": [
         {
-            "institutionImage": "etp.png",
-            "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
-            "shortName": "ETP Nº1",
-            "certificate": "Técnico Informático Profesional y Personal",
-            "date": "2016 - 2021",
-            "observations": "Participación en olimpiadas de programación."
-        },
-        {
             "institutionImage": "fi-unju.png",
             "institutionName": "Facultad de Ingeniería - Universidad Nacional de Jujuy",
             "shortName": "FI - UNJu",
             "certificate": "Analista Programador Universitario",
             "date": "2022 - Actualidad",
-            "observations": "Participación en olimpiadas de programación."
+            "observations": "Promedio de 7.1 | Cursando 2º año"
         },
         {
             "institutionImage": "coderhouse.png",
@@ -54,7 +46,15 @@
             "shortName": "Coder",
             "certificate": "Desarrollo Web - HTML | CSS | SASS | JS",
             "date": "2022",
-            "observations": ""
+            "observations": "Integrante de los 10 mejores alumnos"
+        },
+        {
+            "institutionImage": "etp.png",
+            "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
+            "shortName": "ETP Nº1",
+            "certificate": "Técnico Informático Profesional y Personal",
+            "date": "2016 - 2021",
+            "observations": "Participación en olimpiadas de programación."
         }
     ],
     "skills":[
@@ -71,12 +71,24 @@
             "image": "js.png"
         },
         {
+            "name": "typescript",
+            "image": "ts.png"
+        },
+        {
             "name": "bootstrap",
             "image": "bootstrap.png"
         },
         {
             "name": "tailwind",
             "image": "tailwind.png"
+        },
+        {
+            "name": "react",
+            "image": "react.png"
+        },
+        {
+            "name": "angular",
+            "image": "angular.png"
         },
         {
             "name": "python",
@@ -87,20 +99,20 @@
             "image": "php.png"
         },
         {
-            "name": "git",
-            "image": "git.png"
-        },
-        {
-            "name": "github",
-            "image": "github.png"
-        },
-        {
             "name": "cpp",
             "image": "cpp.png"
         }, 
         {
             "name": "figma",
             "image": "figma.png"
+        },
+        {
+            "name": "git",
+            "image": "git.png"
+        },
+        {
+            "name": "github",
+            "image": "github.png"
         }
     ],
     "projects": [
@@ -115,6 +127,18 @@
             "date": "2022",
             "description": "Tareas, roles, detalles y otras cosas.",
             "url": "https://dariorv.github.io/Clima/"
+        },
+        {
+            "projectName": "app crud",
+            "date": "2021",
+            "description": "Tareas, roles, detalles y otras cosas.",
+            "url": "#"
+        },
+        {
+            "projectName": "juego ahorcadito",
+            "date": "2021",
+            "description": "Tareas, roles, detalles y otras cosas.",
+            "url": "#"
         }
     ]
 }

@@ -1,0 +1,15 @@
+.idiomas .lista{
+    width: 80%;
+    margin: 40px 0;
+}
+.idiomas .lista .idioma{
+    width: 200px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: 2px solid #dbdbdb;
+    padding: 5px 10px;
+    border-left: 5px solid #4e8cff;
+}
+.idiomas .lista .idioma h3, .idiomas .lista .idioma p{
+    margin: 0;
+}

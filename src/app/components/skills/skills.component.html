@@ -2,6 +2,6 @@
     <h2 class="h2">Habilidades</h2>
     <div class="skills d-flex flex-wrap justify-content-center gap-4">
         <div *ngFor="let skill of skills" class="skill d-flex flex justify-content-center align-items-center"><img [src]="'../../../assets/images/' + skill.image" [alt]="skill.name + 'logo'" class="img-fluid"></div>
-        <div class="add-section" *ngIf="authService.logIn()"><i class="bi bi-plus-circle-fill"></i></div>
     </div>
+    <add-button></add-button>
 </section>

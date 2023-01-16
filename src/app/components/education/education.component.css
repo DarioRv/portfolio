@@ -14,39 +14,9 @@
 .estudios .formacion span{
     font-weight: bold;
 }
-.estudios .formacion .edit-buttons button{
-    padding: 5px;
-    border-radius: 5px;
+.estudios .formacion .observaciones{
+    margin-top: 20px;
 }
-.estudios .formacion .edit-buttons button:first-child{
-    border: 2px solid #4e8cff;
-    color: #4e8cff;
-    transition: .2s all;
-}
-.estudios .formacion .edit-buttons button:first-child:hover{
-    background-color: #4e8cff;
-    color: #fff;
-    transition: .2s all;
-}
-.estudios .formacion .edit-buttons button:last-child{
-    border: 2px solid #fa2d2d;
-    color:#fa2d2d;
-}
-.estudios .formacion .edit-buttons button:last-child:hover{
-    background-color: #fa2d2d;
-    color: #fff;
-}
-.estudios .add-section{
+.estudios add-button{
     width: 80%;
-    border: 2px dashed #6c757d;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    color: #6c757d;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-.estudios .add-section:hover{
-    border-color: #4e8cff;
-    color: #4e8cff;
 }

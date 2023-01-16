@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
 	selector: 'education-component',
@@ -10,7 +10,7 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 export class EducationComponent {
     education: any;
 
-	constructor(private portfolioData: PortfolioDataService, public authService: AuthService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
@@ -18,10 +18,10 @@ export class EducationComponent {
 		});
 	}
 
-	email = "";
-	password = "";
-
-	Login(){
-		this.authService.login(this.email, this.password);
+	isLogin(){
+		return this.loginService.isLogin();
+	}
+	logout(){
+		this.loginService.logout();
 	}
 }

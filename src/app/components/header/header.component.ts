@@ -9,10 +9,6 @@ import { LoginService } from 'src/app/services/login.service';
 	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-	
-	email = "";
-	password = "";
-	
 	constructor(private loginService: LoginService){}
 	ngOnInit(){}
 

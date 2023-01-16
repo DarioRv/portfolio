@@ -16,6 +16,12 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginService } from './services/login.service';
 import { PortfolioDataService } from './services/portfolio-data.service';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/error/error.component';
+import { LanguagesComponent } from './components/languages/languages.component';
+import { EditButtonComponent } from './components/edit-button/edit-button.component';
+import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
+import { EditSectionComponent } from './components/edit-section/edit-section.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     LoginComponent,
-    SafePipe
+    SafePipe,
+    ErrorComponent,
+    LanguagesComponent,
+    EditButtonComponent,
+    DeleteButtonComponent,
+    EditSectionComponent,
+    AddButtonComponent
   ],
   imports: [
     BrowserModule,
