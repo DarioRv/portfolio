@@ -1,37 +1,44 @@
-.inicio{
-    height: 100vh;
-    background-image: url("../../../assets/images/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+.inicio {
+  height: 100vh;
+  background-image: url("../../../assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
-.inicio h1{
-    font-size: 76px;
+
+.inicio h1 {
+  font-size: 76px;
 }
-.inicio p{
-    font-size: 36px;
-    margin: 0;
+
+.inicio p {
+  font-size: 36px;
+  margin: 0;
 }
-.inicio .contacto{
-    margin: 20px 0;
+
+.inicio .contacto {
+  margin: 20px 0;
 }
-.inicio .contacto span a{
-    color: #fff;
+
+.inicio .contacto span a {
+  color: #fff;
 }
-.inicio .contacto span{
-    font-weight: bold;
+
+.inicio .contacto span {
+  font-weight: bold;
 }
-.inicio .github button{
-    padding: 10px;
-    border: 3px solid #291d33;
-    border-radius: 10px;
-    font-size: 24px;
-    margin-top: 40px;
-    background-color: #291d33;
-    color: #fff;
-    box-shadow: 0 .7rem 1rem rgb(57 172 163 / 30%);
-    transition: .3s all;
+
+.inicio .github button {
+  padding: 10px;
+  border: 3px solid #291d33;
+  border-radius: 10px;
+  font-size: 24px;
+  margin-top: 40px;
+  background-color: #291d33;
+  color: #fff;
+  box-shadow: 0 .7rem 1rem rgb(57 172 163 / 30%);
+  transition: .3s all;
 }
-.inicio .github button:hover{
-    transform: scale(1.05);
+
+.inicio .github button:hover {
+  transform: scale(1.05);
 }

@@ -1,144 +1,203 @@
 {
-    "name": "Darío Vidal",
-    "position": "Full Stack Developer",
-    "description": "Front End | Back End",
-    "contact": {
-        "tel": "(+54) 3885142501",
-        "email": {"address": "dariorvidal.27@gmail.com", "url": "mailto:dariorvidal@gmail.com"},
-        "linkedin": {"alias": "Darío Vidal", "url": "https://www.linkedin.com/in/dariovidal9/"}
+  "name": "Darío Vidal",
+  "position": "Full Stack Developer",
+  "description": "Front End | Back End",
+  "contact": {
+    "tel": "(+54) 3885142501",
+    "email": {
+      "address": "dariorvidal.27@gmail.com",
+      "url": "mailto:dariorvidal@gmail.com"
     },
-    "about": "",
-    "laboralExperience": [
-        {
-            "companyImage": "ml.png",
-            "companyName": "mercado libre",
-            "position": "Front End Developer",
-            "year": "2022 - 2023",
-            "description": "Tareas, roles, detalles y otras cosas."
-        },
-        {
-            "companyImage": "acc.png",
-            "companyName": "accenture",
-            "position": "Back End Developer",
-            "year": "2018 - 2022",
-            "description": "Tareas, roles, detalles y otras cosas."
-        },
-        {
-            "companyImage": "fc.png",
-            "companyName": "facebook",
-            "position": "Data Engineer",
-            "year": "2015 - 2017",
-            "description": "Tareas, roles, detalles y otras cosas."
-        }
-    ],
-    "education": [
-        {
-            "institutionImage": "fi-unju.png",
-            "institutionName": "Facultad de Ingeniería - Universidad Nacional de Jujuy",
-            "shortName": "FI - UNJu",
-            "certificate": "Analista Programador Universitario",
-            "date": "2022 - Actualidad",
-            "observations": "Promedio de 7.1 | Cursando 2º año"
-        },
-        {
-            "institutionImage": "coderhouse.png",
-            "institutionName": "CoderHouse - Plataforma eLearning",
-            "shortName": "Coder",
-            "certificate": "Desarrollo Web - HTML | CSS | SASS | JS",
-            "date": "2022",
-            "observations": "Integrante de los 10 mejores alumnos"
-        },
-        {
-            "institutionImage": "etp.png",
-            "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
-            "shortName": "ETP Nº1",
-            "certificate": "Técnico Informático Profesional y Personal",
-            "date": "2016 - 2021",
-            "observations": "Participación en olimpiadas de programación."
-        }
-    ],
-    "skills":[
-        {
-            "name": "html5",
-            "image": "html.png"
-        },
-        {
-            "name": "css3",
-            "image": "css.png"
-        },
-        {
-            "name": "javascript",
-            "image": "js.png"
-        },
-        {
-            "name": "typescript",
-            "image": "ts.png"
-        },
-        {
-            "name": "bootstrap",
-            "image": "bootstrap.png"
-        },
-        {
-            "name": "tailwind",
-            "image": "tailwind.png"
-        },
-        {
-            "name": "react",
-            "image": "react.png"
-        },
-        {
-            "name": "angular",
-            "image": "angular.png"
-        },
-        {
-            "name": "python",
-            "image": "python.png"
-        },
-        {
-            "name": "php",
-            "image": "php.png"
-        },
-        {
-            "name": "cpp",
-            "image": "cpp.png"
-        }, 
-        {
-            "name": "figma",
-            "image": "figma.png"
-        },
-        {
-            "name": "git",
-            "image": "git.png"
-        },
-        {
-            "name": "github",
-            "image": "github.png"
-        }
-    ],
-    "projects": [
-        {
-            "projectName": "pasteleria ideal",
-            "date": "2022",
-            "description": "Tareas, roles, detalles y otras cosas.",
-            "url": "https://pasteleriaidealjs.netlify.app/index.html"
-        },
-        {
-            "projectName": "pronostico de clima",
-            "date": "2022",
-            "description": "Tareas, roles, detalles y otras cosas.",
-            "url": "https://dariorv.github.io/Clima/"
-        },
-        {
-            "projectName": "app crud",
-            "date": "2021",
-            "description": "Tareas, roles, detalles y otras cosas.",
-            "url": "#"
-        },
-        {
-            "projectName": "juego ahorcadito",
-            "date": "2021",
-            "description": "Tareas, roles, detalles y otras cosas.",
-            "url": "#"
-        }
-    ]
+    "linkedin": {
+      "alias": "Darío Vidal",
+      "url": "https://www.linkedin.com/in/dariovidal9/"
+    }
+  },
+  "about": "",
+  "laboralExperience": [
+    {
+      "id": 3,
+      "companyImage": "ml.png",
+      "companyName": "mercado libre",
+      "position": "Front End Developer",
+      "year": "2022 - 2023",
+      "description": "Tareas, roles, detalles y otras cosas."
+    },
+    {
+      "id": 2,
+      "companyImage": "acc.png",
+      "companyName": "accenture",
+      "position": "Back End Developer",
+      "year": "2018 - 2022",
+      "description": "Tareas, roles, detalles y otras cosas."
+    },
+    {
+      "id": 1,
+      "companyImage": "fc.png",
+      "companyName": "facebook",
+      "position": "Data Engineer",
+      "year": "2015 - 2017",
+      "description": "Tareas, roles, detalles y otras cosas."
+    }
+  ],
+  "education": [
+    {
+      "id": 3,
+      "institutionImage": "fi-unju.png",
+      "institutionName": "Facultad de Ingeniería - Universidad Nacional de Jujuy",
+      "shortName": "FI - UNJu",
+      "certificate": "Analista Programador Universitario",
+      "date": "2022 - Actualidad",
+      "observations": "Promedio de 7.1 | Cursando 2º año"
+    },
+    {
+      "id": 2,
+      "institutionImage": "coderhouse.png",
+      "institutionName": "CoderHouse - Plataforma eLearning",
+      "shortName": "Coder",
+      "certificate": "Desarrollo Web - HTML | CSS | SASS | JS",
+      "date": "2022",
+      "observations": "Integrante de los 10 mejores alumnos"
+    },
+    {
+      "id": 1,
+      "institutionImage": "etp.png",
+      "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
+      "shortName": "ETP Nº1",
+      "certificate": "Técnico Informático Profesional y Personal",
+      "date": "2016 - 2021",
+      "observations": "Participación en olimpiadas de programación."
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "html5",
+      "image": "html.png"
+    },
+    {
+      "id": 2,
+      "name": "css3",
+      "image": "css.png"
+    },
+    {
+      "id": 3,
+      "name": "sass",
+      "image": "sass.png"
+    },
+    {
+      "id": 4,
+      "name": "javascript",
+      "image": "js.png"
+    },
+    {
+      "id": 5,
+      "name": "typescript",
+      "image": "ts.png"
+    },
+    {
+      "id": 6,
+      "name": "bootstrap",
+      "image": "bootstrap.png"
+    },
+    {
+      "id": 7,
+      "name": "tailwind",
+      "image": "tailwind.png"
+    },
+    {
+      "id": 8,
+      "name": "react",
+      "image": "react.png"
+    },
+    {
+      "id": 9,
+      "name": "angular",
+      "image": "angular.png"
+    },
+    {
+      "id": 10,
+      "name": "python",
+      "image": "python.png"
+    },
+    {
+      "id": 11,
+      "name": "php",
+      "image": "php.png"
+    },
+    {
+      "id": 12,
+      "name": "cpp",
+      "image": "cpp.png"
+    },
+    {
+      "id": 13,
+      "name": "figma",
+      "image": "figma.png"
+    },
+    {
+      "id": 14,
+      "name": "git",
+      "image": "git.png"
+    },
+    {
+      "id": 15,
+      "name": "github",
+      "image": "github.png"
+    }
+  ],
+  "projects": [
+    {
+      "id": 4,
+      "projectName": "pronostico de clima",
+      "date": "2022",
+      "description": "Tareas, roles, detalles y otras cosas.",
+      "url": "https://dariorv.github.io/Clima/",
+      "technologiesImplemented": [
+        "html",
+        "css",
+        "js",
+        "tailwind"
+      ]
+    },
+    {
+      "id": 3,
+      "projectName": "pasteleria ideal",
+      "date": "2022",
+      "description": "Tareas, roles, detalles y otras cosas.",
+      "url": "https://pasteleriaidealjs.netlify.app/index.html",
+      "technologiesImplemented": [
+        "html",
+        "css",
+        "sass",
+        "js",
+        "bootstrap"
+      ]
+    },
+    {
+      "id": 2,
+      "projectName": "app crud",
+      "date": "2021",
+      "description": "Tareas, roles, detalles y otras cosas.",
+      "url": "#",
+      "technologiesImplemented": [
+        "html",
+        "css",
+        "js",
+        "php"
+      ]
+    },
+    {
+      "id": 1,
+      "projectName": "juego ahorcadito",
+      "date": "2021",
+      "description": "Tareas, roles, detalles y otras cosas.",
+      "url": "#",
+      "technologiesImplemented": [
+        "html",
+        "css",
+        "js"
+      ]
+    }
+  ]
 }

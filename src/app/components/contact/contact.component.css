@@ -1,25 +1,106 @@
-.contacto .medios{
-    font-size: 24px;
-    color: #333;
+.contacto .medios {
+  font-size: 24px;
+  color: #333;
+  margin: 40px 0;
 }
-.contacto .medios a{
-    color: #333;
+
+.contacto .medios a {
+  text-decoration: none;
+  color: #333;
 }
-.contacto .medios i{
-    margin-right: 5px;
+
+.contacto .medios i {
+  margin-right: 5px;
 }
-.contacto .medios .linkedin i{
-    color: #0e76a8;
+
+.contacto .medios div {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.contacto .medios .email i{
-    color: #7e7e7e;
+
+.contacto .medios div .edit-buttons {
+  font-size: 16px;
 }
-.contacto .medios .telefono i{
-    color: #000;
+
+.contacto .medios .linkedin {
+  background-color: #eee;
+  border-left: 5px solid #0e76a8;
+  border-right: 5px solid #0e76a8;
+  padding: 4px 15px;
+  border-radius: 5px;
+  transition: .3s all;
 }
-.contacto .medios .github i{
-    color: #333;
+
+.contacto .medios .linkedin:hover {
+  transform: scale(1.04);
 }
-.contacto .medios .localidad i{
-    color: #ff000f;
+
+.contacto .medios .linkedin i {
+  color: #0e76a8;
+}
+
+.contacto .medios .email {
+  background-color: #eee;
+  border-left: 5px solid #0e76a8;
+  border-right: 5px solid #0e76a8;
+  padding: 4px 15px;
+  border-radius: 5px;
+  transition: .3s all;
+}
+
+.contacto .medios .email:hover {
+  transform: scale(1.04);
+}
+
+.contacto .medios .email i {
+  color: #7e7e7e;
+}
+
+.contacto .medios .telefono {
+  background-color: #eee;
+  border-left: 5px solid #0e76a8;
+  border-right: 5px solid #0e76a8;
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+
+.contacto .medios .telefono i {
+  color: #7e7e7e;
+}
+
+.contacto .medios .github {
+  background-color: #eee;
+  border-left: 5px solid #0e76a8;
+  border-right: 5px solid #0e76a8;
+  padding: 4px 15px;
+  border-radius: 5px;
+  transition: .3s all;
+}
+
+.contacto .medios .github:hover {
+  transform: scale(1.04);
+}
+
+.contacto .medios .github i {
+  color: #171515;
+}
+
+.contacto .medios .localidad {
+  background-color: #eee;
+  border-left: 5px solid #0e76a8;
+  border-right: 5px solid #0e76a8;
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+
+.contacto .medios .localidad i {
+  color: #ff000f;
+}
+.contacto add-button {
+  width: 100%;
+  max-width: 450px;
 }

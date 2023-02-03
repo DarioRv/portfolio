@@ -1,7 +1,7 @@
 <section class="proyectos container-fluid d-flex flex-column align-items-center" id="proyectos">
     <h2 class="h2">Proyectos</h2>
-    <div class="lista">
-    <div *ngFor="let project of projects" class="proyecto d-flex flex-column flex-md-row justify-content-between gap-5 shadow">
+    <div class="lista justify-content-center justify-content-xl-between">
+    <div *ngFor="let project of projects" class="proyecto d-flex flex-column flex-md-row justify-content-md-between gap-5 shadow">
         <!-- <div class="muestra">
             <iframe [src]="project.url | safe"></iframe>
         </div> -->
@@ -10,9 +10,18 @@
             <h4 class="text-muted">{{project.date}}</h4>
             <p>{{project.description}}</p>
             <a [href]="project.url" target="_blank">Ir al sitio <i class="bi bi-link-45deg"></i></a>
+            <h5>Tecnologías Implementadas</h5>
+            <div class="tecnologias-implementadas d-flex gap-1 flex-wrap">
+              <div *ngFor="let technology of project.technologiesImplemented"  class="image">
+                <img [src]="'../../../assets/images/'+ technology +'.png'" [alt]="'Icono de ' + technology">
+              </div>
+            </div>
         </div>
-        <edit-section></edit-section>
+        <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
+          <edit-button></edit-button>
+          <delete-button></delete-button>
+        </div>
     </div>
     </div>
-    <add-button></add-button>
+    <add-button *ngIf="isLogin()"></add-button>
 </section>

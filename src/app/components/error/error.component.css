@@ -1,33 +1,37 @@
-.page-not-found{
-    width: 100vw;
-    height: 100vh;
-    background-color: #282842;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    display: grid;
-    place-content: center;
+.page-not-found {
+  width: 100vw;
+  height: 100vh;
+  background-color: #282842;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  display: grid;
+  place-content: center;
 }
-.page-not-found  h1{
-    text-align: start;
-    font-size: 76px;
-    line-height: 70px;
+
+.page-not-found h1 {
+  text-align: start;
+  font-size: 76px;
+  line-height: 70px;
 }
-.page-not-found h1 span{
-    color: #39aca3;
-    font-size: 96px;
+
+.page-not-found h1 span {
+  color: #39aca3;
+  font-size: 96px;
 }
-.page-not-found button{
-    margin: 30px 0;
-    border: 2px dashed #39aca3;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-    font-size: 22px;
-    padding: 5px;
-    transition: .3s all;
+
+.page-not-found button {
+  margin: 30px 0;
+  border: 2px dashed #39aca3;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px;
+  transition: .3s all;
 }
-.page-not-found button:hover{
-    background-color: #39aca3;
-    border-style: solid;
+
+.page-not-found button:hover {
+  background-color: #39aca3;
+  border-style: solid;
 }

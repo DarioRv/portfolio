@@ -22,6 +22,11 @@ import { EditButtonComponent } from './components/edit-button/edit-button.compon
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { EditSectionComponent } from './components/edit-section/edit-section.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
+import { FormEditExperienceComponent } from './components/form-edit-experience/form-edit-experience.component';
+import { FormEditEducationComponent } from './components/form-edit-education/form-edit-education.component';
+import { FormEditProjectComponent } from './components/form-edit-project/form-edit-project.component';
+import { LoginGuardian } from './components/login/login-guardian';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -42,14 +47,18 @@ import { AddButtonComponent } from './components/add-button/add-button.component
     EditButtonComponent,
     DeleteButtonComponent,
     EditSectionComponent,
-    AddButtonComponent
+    AddButtonComponent,
+    FormEditExperienceComponent,
+    FormEditEducationComponent,
+    FormEditProjectComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ PortfolioDataService,LoginService],
+  providers: [ PortfolioDataService,LoginService, LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

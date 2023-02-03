@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
-import { AuthService } from 'src/app/services/auth.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
 	selector: 'experience-component',
@@ -10,18 +10,35 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ExperienceComponent {
 	laboralExperience: any;
 
-	constructor(private portfolioData: PortfolioDataService, public authService: AuthService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
 			this.laboralExperience = data.laboralExperience;
 		});
+
 	}
 
-	email = "";
-	password = "";
-
-	Login(){
-		this.authService.login(this.email, this.password);
+	isLogin(){
+		return this.loginService.isLogin();
 	}
+
+  getData(image: any, companyName: any, position: any, description: any, year: any){
+
+    let imageRecovered = image.getAttribute('src').slice(image.getAttribute('src').lastIndexOf('/') + 1, image.getAttribute('src').length);
+    let companyNameRecovered = companyName.textContent.toLowerCase();
+    let positionRecovered = position.textContent.toLowerCase();
+    let descriptionRecovered = description.textContent.toLowerCase();
+    let yearRecovered = year.textContent.toLowerCase();
+
+    const objeto = { companyImage: imageRecovered,
+      companyName: companyNameRecovered,
+      position: positionRecovered,
+      year: descriptionRecovered,
+      description: yearRecovered
+    }
+
+    console.log(objeto);
+  }
+
 }

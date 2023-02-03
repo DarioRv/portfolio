@@ -1,10 +1,36 @@
 <section class="contacto container-fluid d-flex flex-column align-items-center" id="contacto">
     <h2 class="h2">Contacto</h2>
     <div class="medios d-flex flex-column align-items-center gap-3">
-        <div class="linkedin"><a href="https://www.linkedin.com/in/dariovidal9/" target="_blank"><i class="bi bi-linkedin"></i>Darío Vidal</a></div>
-        <div class="email"><a href="mailto:dariorvidal.27@gmail.com"><i class="bi bi-envelope-fill"></i>dariorvidal.27@gmail.com</a></div>
-        <div class="telefono"><i class="bi bi-telephone-fill"></i>(+54) 3885142501</div>
-        <div class="github"><a href="https://github.com/DarioRv" target="_blank"><i class="bi bi-github"></i>DarioRv</a></div>
-        <div class="localidad"><i class="bi bi-geo-alt-fill"></i>Argentina, Jujuy</div>
+        <div class="linkedin d-flex justify-content-between shadow"><a href="https://www.linkedin.com/in/dariovidal9/" target="_blank"><i class="bi bi-linkedin"></i>Darío Vidal</a>
+          <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+            <edit-button></edit-button>
+            <delete-button></delete-button>
+          </div>
+      </div>
+        <div class="email d-flex justify-content-between shadow"><a href="mailto:dariorvidal.27@gmail.com"><i class="bi bi-envelope-fill"></i>dariorvidal.27@gmail.com</a>
+          <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+            <edit-button></edit-button>
+            <delete-button></delete-button>
+          </div>
+      </div>
+        <div class="telefono d-flex justify-content-between shadow"><span><i class="bi bi-telephone-fill"></i>(+54) 3885142501</span>
+          <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+            <edit-button></edit-button>
+            <delete-button></delete-button>
+          </div>
+      </div>
+        <div class="github d-flex justify-content-between shadow"><a href="https://github.com/DarioRv" target="_blank"><i class="bi bi-github"></i>DarioRv</a>
+          <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+            <edit-button></edit-button>
+            <delete-button></delete-button>
+          </div>
+      </div>
+        <div class="localidad d-flex justify-content-between shadow"><span><i class="bi bi-geo-alt-fill"></i>Argentina, Jujuy</span>
+          <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+            <edit-button></edit-button>
+            <delete-button></delete-button>
+          </div>
+      </div>
     </div>
+    <add-button></add-button>
 </section>

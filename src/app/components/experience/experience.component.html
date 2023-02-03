@@ -2,17 +2,20 @@
     <h2 class="h2">Experiencia Laboral</h2>
     <div *ngFor="let item of laboralExperience" class="item d-flex flex-column align-items-center text-center text-lg-start flex-lg-row align-items-lg-start gap-lg-5">
         <div class="logo-empresa">
-            <img [src]="'../../../assets/images/' + item.companyImage" alt="logo" class="img-fluid">
+            <img [src]="'../../../assets/images/' + item.companyImage" alt="logo" class="img-fluid" #image>
         </div>
         <div class="detalles">
-            <h3>{{item.companyName | uppercase}}</h3>
-            <h4 class="text-muted">{{item.position}}</h4>
-            <p>{{item.description}}</p>
+            <h3 #companyName>{{item.companyName | uppercase}}</h3>
+            <h4 class="text-muted" #position>{{item.position}}</h4>
+            <p #description>{{item.description}}</p>
         </div>
         <div class="año text-center text-lg-end">
-            <span>{{item.year}}</span>
+            <span #year>{{item.year}}</span>
         </div>
-        <edit-section></edit-section>
+        <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
+          <edit-button routerLink="/edit-experience" (click)="getData(image, companyName, position, description, year)"></edit-button>
+          <delete-button></delete-button>
+        </div>
     </div>
-    <add-button></add-button>
+    <add-button *ngIf="isLogin()"></add-button>
 </section>

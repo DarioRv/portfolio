@@ -10,7 +10,10 @@
         <span class="text-muted">{{item.date}}</span>
         <div class="observaciones">{{item.observations}}</div>
         </div>
-        <edit-section></edit-section>
+        <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
+          <edit-button></edit-button>
+          <delete-button></delete-button>
+        </div>
     </div>
-    <add-button></add-button>
+    <add-button *ngIf="isLogin()"></add-button>
 </section>

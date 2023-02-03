@@ -1,24 +1,16 @@
-.habilidades .skills{
-    width: 80%;
-    margin: 40px 0;
+.habilidades .skills {
+  width: 80%;
+  margin: 40px 0;
 }
-.habilidades .skills .skill{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid #dbdbdb;
-    padding: 15px;
-    position: relative;
+
+.habilidades .skills .skill {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #dbdbdb;
+  padding: 15px;
 }
-add-section{
-    position: absolute;
-    left: 0;
-    bottom: 50px;
-}
-add-section .edit-buttons{
-    flex-direction: row;
-}
-.habilidades add-button{
-    width: 80%;
-    display: flex;
+.habilidades add-button {
+  width: 80%;
+  display: flex;
 }

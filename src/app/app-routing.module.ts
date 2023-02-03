@@ -13,9 +13,19 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FormEditExperienceComponent } from './components/form-edit-experience/form-edit-experience.component';
+import { FormEditEducationComponent } from './components/form-edit-education/form-edit-education.component';
+import { FormEditProjectComponent } from './components/form-edit-project/form-edit-project.component';
+import { LoginGuardian } from './components/login/login-guardian';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
+
 const routes: Routes = [
 	{path: "login", component: LoginComponent},
+  {path: "edit-experience", component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
+  {path: "edit-education", component: FormEditEducationComponent, canActivate: [LoginGuardian]},
+  {path: "edit-project", component: FormEditProjectComponent, canActivate: [LoginGuardian]},
 	{path: "", redirectTo: "", pathMatch: "full"},
+  {path: "unauthorized", component: UnauthorizedComponent},
 	{path: "**", component: ErrorComponent}
 ];
 

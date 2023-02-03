@@ -1,23 +1,28 @@
-.experiencia .item{
-    width: 80%;
-    margin: 40px 0;
-    border-bottom: 2px solid #dbdbdb;
+.experiencia .item {
+  width: 80%;
+  margin: 40px 0;
+  border-bottom: 2px solid #dbdbdb;
 }
-.experiencia .item .logo-empresa{
-    width: 150px;
+
+.experiencia .item .logo-empresa {
+  width: 150px;
 }
-.experiencia .item .logo-empresa img{
-    border-radius: 5px;
+
+.experiencia .item .logo-empresa img {
+  border-radius: 5px;
 }
-.experiencia .item .detalles p{
-    text-align: left;
+
+.experiencia .item .detalles p {
+  text-align: left;
 }
-.experiencia .item .año{
-    width: 50%;
-    font-size: 36px;
-    color: #6c757d;
-    font-weight: bold;
+
+.experiencia .item .año {
+  width: 50%;
+  font-size: 36px;
+  color: #6c757d;
+  font-weight: bold;
 }
-.experiencia add-button{
-    width: 80%;
+
+.experiencia add-button {
+  width: 80%;
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import 'bootstrap';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,9 @@ export class LoginService {
           }
         )
       }
-    ).catch(err => console.log("ERROR!"));
+    ).catch(err => {
+
+    });
   }
   getIdToken(){
     return localStorage.getItem("token");
