@@ -3,5 +3,5 @@
     <div class="skills d-flex flex-wrap justify-content-center gap-4">
         <div *ngFor="let skill of skills" class="skill d-flex flex justify-content-center align-items-center"><img [src]="'../../../assets/images/' + skill.image" [alt]="skill.name + 'logo'" class="img-fluid"></div>
     </div>
-    <add-button></add-button>
+    <add-button routerLink="/add-skill"></add-button>
 </section>

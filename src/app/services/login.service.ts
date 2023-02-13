@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import 'bootstrap';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +18,21 @@ export class LoginService {
           token => {
             this.router.navigate([""]);
             localStorage.setItem("token", token);
-            console.log("Te has loggeado");
+            Swal.fire({
+              title: 'Has iniciado sesión',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
           }
         )
       }
     ).catch(err => {
-
+      Swal.fire({
+        title: 'Error!',
+        text: 'No has podido autenticarte',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     });
   }
   getIdToken(){
@@ -34,10 +43,17 @@ export class LoginService {
   }
   logout(){
     firebase.auth().signOut().then( () => {
-      this.router.navigate(["/"]);
-      localStorage.removeItem("token");
-      window.location.reload();
+      Swal.fire({
+        title: 'Has salido de tu sesión',
+        text: 'La pagina se recargará en 3 segundos',
+        icon: 'info',
+        confirmButtonText: 'OK'
+      });
+      setTimeout (() => {
+        this.router.navigate(["/"]);
+        localStorage.removeItem("token");
+        window.location.reload();
+      }, 3000)
     });
-    console.log("Has salido de tu sesion");
   }
 }

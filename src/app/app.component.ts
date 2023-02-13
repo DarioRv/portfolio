@@ -7,12 +7,14 @@ import firebase from "firebase/compat/app"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio';
+
+  private readonly firebaseApiKey = '';
+  private readonly firebaseAuthDomain = '';
 
   ngOnInit(): void{
     firebase.initializeApp({
-      apiKey: "AIzaSyB9Xe6ttEuF-Em8YkQVz1sVDigDMp05EJ4",
-      authDomain: "portfolio-ef291.firebaseapp.com",
+      apiKey: this.firebaseApiKey,
+      authDomain: this.firebaseAuthDomain,
     })
   }
 }

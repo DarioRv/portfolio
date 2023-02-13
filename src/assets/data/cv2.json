@@ -1,0 +1,237 @@
+{
+  "personalData": {
+      "id": 1,
+      "name": "Darío Vidal",
+      "position": "Full Stack Developer",
+      "description": "Front End | Back End",
+      "age": "19",
+      "nacionality": "Argentino",
+      "address": "Argentina, Jujuy",
+      "about": "Proactivo, organizado, responsable y capacidad de liderazgo. Siempre tengo la mejor disposición para la realización de mis labores. En búsqueda de mi primera experiencia laboral. Algunos de mis proyectos se encuentran destacados en mi GitHub."
+  },
+  "contact": [
+      {
+          "id": 1,
+          "type": "tel",
+          "alias": "",
+          "address": "(+54) 3885142501",
+          "url": "",
+          "idPersona": 1
+      },
+      {
+          "id": 2,
+          "type": "linkedin",
+          "alias": "Darío Vidal",
+          "address": "",
+          "url": "https://www.linkedin.com/in/dariovidal9/",
+          "idPersona": 1
+      },
+      {
+          "id": 3,
+          "type": "email",
+          "alias": "Dario Vidal",
+          "address": "dariorvidal.27@gmail.com",
+          "url": "mailto:dariorvidal@gmail.com",
+          "idPersona": 1
+      },
+      {
+          "id": 4,
+          "type": "github",
+          "alias": "DarioRv",
+          "address": "",
+          "url": "https://github.com/DarioRv",
+          "idPersona": 1
+      }
+  ],
+  "laboralExperience": [
+      {
+          "id": 1,
+          "companyImage": "fb.png",
+          "companyName": "facebook",
+          "position": "Data Engineer",
+          "year": "2015 - 2017",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "idPersona": 1
+      },
+      {
+          "id": 2,
+          "companyImage": "acc.png",
+          "companyName": "accenture",
+          "position": "back end developer",
+          "year": "2018 - 2022",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "idPersona": 1
+      },
+      {
+          "id": 3,
+          "companyImage": "ml.png",
+          "companyName": "mercado libre",
+          "position": "front end developer",
+          "year": "2022 - 2023",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "idPersona": 1
+      }
+  ],
+  "education": [
+      {
+          "id": 1,
+          "institutionName": "Escuela Técnica Provincial Nº1 'Aristobulo Vargas Belmonte' - Escuela Secundaria",
+          "institutionImage": "etp.png",
+          "shortName": "etp",
+          "certificate": "Técnico Informático Profesional y Personal",
+          "date": "2016 - 2021",
+          "observations": "Participación en olimpiadas de programación.",
+          "idPersona": 1
+      },
+      {
+          "id": 2,
+          "institutionName": "CoderHouse - Plataforma eLearning",
+          "institutionImage": "coderhouse.png",
+          "shortName": "coder",
+          "certificate": "Desarrollo Web - HTML | CSS | SASS | JS",
+          "date": "2022",
+          "observations": "Integrante de los 10 mejores alumnos",
+          "idPersona": 1
+      },
+      {
+          "id": 3,
+          "institutionName": "Facultad de Ingeniería - Universidad Nacional de Jujuy",
+          "institutionImage": "fi-unju.png",
+          "shortName": "fi-unju",
+          "certificate": "Analista Programador Universitario",
+          "date": "2022 - Actualidad",
+          "observations": "Promedio de 7.1 | Cursando 2º año",
+          "idPersona": 1
+      }
+  ],
+  "skills": [
+      {
+          "id": 1,
+          "name": "html5",
+          "image": "html.png",
+          "idPersona": 1
+      },
+      {
+          "id": 2,
+          "name": "css3",
+          "image": "css.png",
+          "idPersona": 1
+      },
+      {
+          "id": 3,
+          "name": "sass",
+          "image": "sass.png",
+          "idPersona": 1
+      },
+      {
+          "id": 4,
+          "name": "javascript",
+          "image": "js.png",
+          "idPersona": 1
+      },
+      {
+          "id": 5,
+          "name": "typescript",
+          "image": "ts.png",
+          "idPersona": 1
+      },
+      {
+          "id": 6,
+          "name": "bootstrap",
+          "image": "bootstrap.png",
+          "idPersona": 1
+      },
+      {
+          "id": 7,
+          "name": "tailwind",
+          "image": "tailwind.png",
+          "idPersona": 1
+      },
+      {
+          "id": 8,
+          "name": "react",
+          "image": "react.png",
+          "idPersona": 1
+      },
+      {
+          "id": 9,
+          "name": "angular",
+          "image": "angular.png",
+          "idPersona": 1
+      },
+      {
+          "id": 10,
+          "name": "python",
+          "image": "python.png",
+          "idPersona": 1
+      },
+      {
+          "id": 11,
+          "name": "php",
+          "image": "php.png",
+          "idPersona": 1
+      },
+      {
+          "id": 12,
+          "name": "cpp",
+          "image": "cpp.png",
+          "idPersona": 1
+      },
+      {
+          "id": 13,
+          "name": "figma",
+          "image": "figma.png",
+          "idPersona": 1
+      },
+      {
+          "id": 14,
+          "name": "git",
+          "image": "git.png",
+          "idPersona": 1
+      },
+      {
+          "id": 15,
+          "name": "github",
+          "image": "github.png",
+          "idPersona": 1
+      }
+  ],
+  "projects": [
+      {
+          "id": 1,
+          "projectName": "juego ahorcadito",
+          "date": "2021",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "url": "#",
+          "implementedTechnologies": "html, css, js",
+          "idPersona": 1
+      },
+      {
+          "id": 2,
+          "projectName": "app crud",
+          "date": "2021",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "url": "#",
+          "implementedTechnologies": "html, css, js, php",
+          "idPersona": 1
+      },
+      {
+          "id": 3,
+          "projectName": "pasteleria ideal",
+          "date": "2022",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "url": "https://pasteleriaidealjs.netlify.app/index.html",
+          "implementedTechnologies": "html, css, sass, js, bootstrap",
+          "idPersona": 1
+      },
+      {
+          "id": 4,
+          "projectName": "pronostico de clima",
+          "date": "2022",
+          "description": "Tareas, roles, detalles y otras cosas.",
+          "url": "https://dariorv.github.io/Clima/",
+          "implementedTechnologies": "html, css,js ,tailwind",
+          "idPersona": 1
+      }
+  ]
+}

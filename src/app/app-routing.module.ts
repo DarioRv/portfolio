@@ -13,17 +13,24 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FormEditContactComponent } from './components/form-edit-contact/form-edit-contact.component';
 import { FormEditExperienceComponent } from './components/form-edit-experience/form-edit-experience.component';
 import { FormEditEducationComponent } from './components/form-edit-education/form-edit-education.component';
 import { FormEditProjectComponent } from './components/form-edit-project/form-edit-project.component';
 import { LoginGuardian } from './components/login/login-guardian';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
+import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-skill.component';
 
 const routes: Routes = [
 	{path: "login", component: LoginComponent},
   {path: "edit-experience", component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
+  {path: "add-experience", component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
   {path: "edit-education", component: FormEditEducationComponent, canActivate: [LoginGuardian]},
+  {path: "add-education", component: FormEditEducationComponent, canActivate: [LoginGuardian]},
   {path: "edit-project", component: FormEditProjectComponent, canActivate: [LoginGuardian]},
+  {path: "add-project", component: FormEditProjectComponent, canActivate: [LoginGuardian]},
+  {path: "edit-contact", component: FormEditContactComponent, canActivate: [LoginGuardian]},
+  {path: "add-skill", component: FormEditSkillComponent, canActivate: [LoginGuardian]},
 	{path: "", redirectTo: "", pathMatch: "full"},
   {path: "unauthorized", component: UnauthorizedComponent},
 	{path: "**", component: ErrorComponent}

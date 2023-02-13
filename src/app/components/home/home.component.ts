@@ -15,19 +15,31 @@ export class HomeComponent {
 	emailAddress: string = "";
 	linkedinUrl: string = "";
 	linkedinAlias: string = "";
+  githubUrl: string = "";
 
 	constructor(private portfolioData: PortfolioDataService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
-			this.name = data.name;
-			this.position = data.position;
-			this.description = data.description;
-			this.tel = data.contact.tel;
-			this.emailUrl = data.contact.email.url;
-			this.emailAddress = data.contact.email.address;
-			this.linkedinUrl = data.contact.linkedin.url;
-			this.linkedinAlias = data.contact.linkedin.alias;
+			this.name = data.personalData.name;
+			this.position = data.personalData.position;
+			this.description = data.personalData.description;
+      data.contact.forEach((contact: any) => {
+        if (contact.type == "tel")
+          this.tel = contact.address;
+        if (contact.type == "email"){
+          this.emailUrl = contact.url;
+          this.emailAddress = contact.address;
+
+        }
+        if (contact.type == "linkedin"){
+          this.linkedinUrl = contact.url;
+          this.linkedinAlias = contact.alias;
+        }
+        if (contact.type == "github"){
+          this.githubUrl = contact.url;
+        }
+      });
 		});
 	}
 }

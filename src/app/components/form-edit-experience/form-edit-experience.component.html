@@ -1,16 +1,17 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form action="" method="POST">
-    <h5>Editar Experiencia Laboral</h5>
+  <form action="" method="POST" #experienceForm="ngForm" (submit)="addNewLaboralExperience(experienceForm)">
+    <h5 *ngIf="getUrl() == '/add-experience'">Agregar Experiencia Laboral</h5>
+    <h5 *ngIf="getUrl() == '/edit-experience'">Editar Experiencia Laboral</h5>
     <label for="image">Imagen</label>
-    <input type="text" name="image">
+    <input type="text" name="imagen" autocomplete="none" #image ngModel>
     <label for="nombre-empresa">Nombre de la empresa</label>
-    <input type="text" name="nombre-empresa">
+    <input type="text" name="nombreEmpresa" autocomplete="none" #name ngModel>
     <label for="posicion">Posición</label>
-    <input type="text" name="posicion">
+    <input type="text" name="posicion" autocomplete="none" #position ngModel>
     <label for="periodo">Periodo</label>
-    <input type="text" name="periodo">
+    <input type="text" name="periodo" autocomplete="none" #year ngModel>
     <label for="descripcion">Descripcion</label>
-    <textarea name="descripcion"></textarea>
+    <textarea name="descripcion" autocomplete="none" #description ngModel></textarea>
     <input type="submit" value="INGRESAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>

@@ -27,6 +27,9 @@ import { FormEditEducationComponent } from './components/form-edit-education/for
 import { FormEditProjectComponent } from './components/form-edit-project/form-edit-project.component';
 import { LoginGuardian } from './components/login/login-guardian';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
+import { FormEditContactComponent } from './components/form-edit-contact/form-edit-contact.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-skill.component';
 
 @NgModule({
   declarations: [
@@ -51,14 +54,17 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
     FormEditExperienceComponent,
     FormEditEducationComponent,
     FormEditProjectComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    FormEditContactComponent,
+    PortfolioComponent,
+    FormEditSkillComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ PortfolioDataService,LoginService, LoginGuardian],
+  providers: [ PortfolioDataService, LoginService, LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

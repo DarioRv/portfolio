@@ -11,9 +11,16 @@
     "linkedin": {
       "alias": "Darío Vidal",
       "url": "https://www.linkedin.com/in/dariovidal9/"
+    },
+    "github": {
+      "alias": "DarioRv",
+      "url": "https://github.com/DarioRv"
     }
   },
-  "about": "",
+  "about": {
+    "textTitle": "Argentino, 19 años.",
+    "textBody": "Proactivo, organizado, responsable y capacidad de liderazgo. Siempre tengo la mejor disposición para la realización de mis labores. En búsqueda de mi primera experiencia laboral. Algunos de mis proyectos se encuentran destacados en mi GitHub."
+  },
   "laboralExperience": [
     {
       "id": 3,
@@ -153,7 +160,7 @@
       "date": "2022",
       "description": "Tareas, roles, detalles y otras cosas.",
       "url": "https://dariorv.github.io/Clima/",
-      "technologiesImplemented": [
+      "implementedTechnologies": [
         "html",
         "css",
         "js",
@@ -166,7 +173,7 @@
       "date": "2022",
       "description": "Tareas, roles, detalles y otras cosas.",
       "url": "https://pasteleriaidealjs.netlify.app/index.html",
-      "technologiesImplemented": [
+      "implementedTechnologies": [
         "html",
         "css",
         "sass",
@@ -180,7 +187,7 @@
       "date": "2021",
       "description": "Tareas, roles, detalles y otras cosas.",
       "url": "#",
-      "technologiesImplemented": [
+      "implementedTechnologies": [
         "html",
         "css",
         "js",
@@ -193,7 +200,7 @@
       "date": "2021",
       "description": "Tareas, roles, detalles y otras cosas.",
       "url": "#",
-      "technologiesImplemented": [
+      "implementedTechnologies": [
         "html",
         "css",
         "js"

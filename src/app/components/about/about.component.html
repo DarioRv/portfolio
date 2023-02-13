@@ -1,9 +1,13 @@
 <section class="sobre-mi container-fluid d-flex flex-column align-items-center" id="sobre-mi">
-    <h2 class="h2">Sobre Mi</h2>
-    <p> <span><b>Argentino, 19 años.</b></span>
-      <br>
-      Proactivo, organizado, responsable y capacidad de liderazgo. Siempre tengo la mejor disposición para la realización de mis labores.
-      En búsqueda de mi primera experiencia laboral.
-      <br>
-      Algunos de mis proyectos se encuentran destacados en mi GitHub.</p>
+  <h2 class="h2">Sobre Mi</h2>
+  <div class="detalles d-flex flex-column align-items-center flex-lg-row gap-3">
+    <p>
+      <span><b>{{nacionality}}, {{age}} años.</b></span> <br>
+      {{about}}
+    </p>
+    <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
+      <edit-button></edit-button>
+      <delete-button></delete-button>
+    </div>
+  </div>
 </section>

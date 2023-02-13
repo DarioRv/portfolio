@@ -1,6 +1,10 @@
 .sobre-mi {
   margin-top: 20px;
 }
+.sobre-mi .detalles {
+  width: 80%;
+  margin: 40px 0;
+}
 
 .sobre-mi h2 + p{
   width: 80%;

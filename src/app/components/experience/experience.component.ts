@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild} from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
+import { ExperienceDataFormService } from 'src/app/services/experience-form-data.service';
 
 @Component({
 	selector: 'experience-component',
@@ -8,13 +9,15 @@ import { LoginService } from 'src/app/services/login.service';
 	styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
+  loadedData: boolean = false;
 	laboralExperience: any;
 
-	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private getDataForm: ExperienceDataFormService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
 			this.laboralExperience = data.laboralExperience;
+      this.loadedData = true;
 		});
 
 	}
@@ -23,22 +26,7 @@ export class ExperienceComponent {
 		return this.loginService.isLogin();
 	}
 
-  getData(image: any, companyName: any, position: any, description: any, year: any){
-
-    let imageRecovered = image.getAttribute('src').slice(image.getAttribute('src').lastIndexOf('/') + 1, image.getAttribute('src').length);
-    let companyNameRecovered = companyName.textContent.toLowerCase();
-    let positionRecovered = position.textContent.toLowerCase();
-    let descriptionRecovered = description.textContent.toLowerCase();
-    let yearRecovered = year.textContent.toLowerCase();
-
-    const objeto = { companyImage: imageRecovered,
-      companyName: companyNameRecovered,
-      position: positionRecovered,
-      year: descriptionRecovered,
-      description: yearRecovered
-    }
-
-    console.log(objeto);
+  getData(image:any, companyName:any, position:any, description:any, year:any){
+    this.getDataForm.getDataForm(image, companyName, position, description, year);
   }
-
 }
