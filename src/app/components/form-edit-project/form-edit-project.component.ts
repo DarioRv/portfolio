@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { ProjectFormDataService } from 'src/app/services/project-form-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import Swal from 'sweetalert2';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'form-edit-project',
@@ -9,11 +11,11 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
   styleUrls: ['./form-edit-project.component.css']
 })
 export class FormEditProjectComponent {
-  @ViewChild("name") name: any;
-  @ViewChild("date") date: any;
-  @ViewChild("description") description: any;
-  @ViewChild("url") url: any;
-  @ViewChild("technologies") technologies: any;
+  name!: string;
+  date!: string;
+  description!: string;
+  url!: string;
+  technologies!: string;
 
   private recoveredData: any;
 
@@ -31,32 +33,64 @@ export class FormEditProjectComponent {
     return this.router.url;
   }
 
-  ngOnInit(): void { }
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     if (this.getUrl() == "/edit-project") {
       this.setDataRecovered(this.formData.getDataRecovered());
       console.log(this.recoveredData);
-      this.name.nativeElement.value = this.recoveredData.projectName;
-      this.date.nativeElement.value = this.recoveredData.date;
-      this.description.nativeElement.value = this.recoveredData.description;
-      this.url.nativeElement.value = this.recoveredData.url;
-      this.technologies.nativeElement.value = this.recoveredData.implementedTechnologies;
+      this.name = this.recoveredData.projectName;
+      this.date = this.recoveredData.date;
+      this.description = this.recoveredData.description;
+      this.url = this.recoveredData.url;
+      this.technologies = this.recoveredData.implementedTechnologies;
     }
   }
 
-  addNewProject(form: any) {
-    const project = `{
-      "projectName": "${form.value.nombreProyecto}",
-      "date": "${form.value.periodo}",
-      "description": "${form.value.descripcion}",
-      "url": "${form.value.url}",
-      "implementedTechnologies": "${form.value.tecnologias}",
-      "idPersona": ${1}
-    }`;
-    this.portfolioService.addNewProject(JSON.parse(project)).subscribe(res => {
-      console.log(res);
-    });
+  sendForm(form: NgForm) {
+    let project = {};
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+    })
+
+    if (this.getUrl() == '/add-project') {
+      project = {...project,
+        "projectName": this.name,
+        "date": this.date,
+        "description": this.description,
+        "url": this.url,
+        "implementedTechnologies": this.technologies,
+        "idPersona": 1
+      };
+      this.portfolioService.addNewProject(project).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha agregada un nuevo proyecto. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
+    else {
+      project = {...project,
+        "id": this.formData.getDataRecovered().id,
+        "projectName": this.name,
+        "date": this.date,
+        "description": this.description,
+        "url": this.url,
+        "implementedTechnologies": this.technologies,
+        "idPersona": 1
+      };
+      this.portfolioService.editProject(project).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha actualizado un proyecto. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
   }
 
 }

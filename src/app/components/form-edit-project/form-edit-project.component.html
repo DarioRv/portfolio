@@ -1,17 +1,17 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form method="POST" #projectForm="ngForm" (submit)="addNewProject(projectForm)">
+  <form method="POST" #projectForm="ngForm" (submit)="sendForm(projectForm)">
     <h5 *ngIf="getUrl() == '/add-project'">Añadir Proyecto</h5>
     <h5 *ngIf="getUrl() == '/edit-project'">Editar Proyecto</h5>
     <label for="nombreProyecto">Nombre del proyecto</label>
-    <input type="text" name="nombreProyecto" autocomplete="none" #name ngModel>
+    <input type="text" name="nombreProyecto" autocomplete="none" [(ngModel)]="name">
     <label for="periodo">Periodo</label>
-    <input type="text" name="periodo" autocomplete="none" #date ngModel>
+    <input type="text" name="periodo" autocomplete="none" [(ngModel)]="date">
     <label for="descripcion">Descripcion</label>
-    <textarea name="descripcion" autocomplete="none" #description ngModel></textarea>
+    <textarea name="descripcion" autocomplete="none" [(ngModel)]="description"></textarea>
     <label for="url">URL</label>
-    <input type="text" name="url" autocomplete="none" #url ngModel>
+    <input type="text" name="url" autocomplete="none" [(ngModel)]="url">
     <label for="tecnologias">Tecnologias implementadas</label>
-    <input type="text" name="tecnologias" autocomplete="none" #technologies ngModel>
+    <input type="text" name="tecnologias" autocomplete="none" [(ngModel)]="technologies">
     <input type="submit" value="INGRESAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>

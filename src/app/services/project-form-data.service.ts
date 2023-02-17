@@ -17,29 +17,15 @@ export class ProjectFormDataService {
     return this.dataRecovered;
   }
 
-  toTitleCase(string: string) {
-    return string.split(' ').map((title) => {
-      return title.replace(title[0], title[0].toUpperCase());
-    }).join(' ');
-  }
-  toCapitalizeCase(string: string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-
-  getDataForm(name: any, date: any, description: any, url: any, technologies: any) {
-    let nameRecovered = name.textContent.toUpperCase();
-    let dateRecovered = date.textContent;
-    let descriptionRecovered = this.toTitleCase(description.textContent);
-    let urlRecovered = url.getAttribute("href");
-    let technlogiesRecovered = technologies;
-
-    let data = { projectName: nameRecovered,
-      date: dateRecovered,
-      description: descriptionRecovered,
-      url: urlRecovered,
-      implementedTechnologies: technlogiesRecovered
+  getDataForm(id: number, name: string, date: string, description: string, url: string, technologies: string) {
+    const data = {
+      id: id,
+      projectName: name,
+      date: date,
+      description: description,
+      url: url,
+      implementedTechnologies: technologies
     };
-
     this.setDataRecovered({ ...data });
   }
 

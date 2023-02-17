@@ -3,16 +3,16 @@
     <div *ngFor="let item of education.reverse()" class="formacion d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-between">
         <div class="details">
         <div class="instituto d-flex align-items-center gap-3">
-            <img [src]="'../../../assets/images/' + item.institutionImage" [alt]="item.shortName" class="logo img-fluid" #image>
-            <h3 #name>{{item.institutionName}}</h3>
+            <img [src]="'../../../assets/images/' + item.institutionImage" [alt]="item.shortName" class="logo img-fluid">
+            <h3>{{item.institutionName | titlecase}}</h3>
         </div>
-        <h4 class="text-muted" #certificate>{{item.certificate}}</h4>
-        <span class="text-muted" #date>{{item.date}}</span>
-        <div class="observaciones" #observations>{{item.observations}}</div>
+        <h4 class="text-muted">{{item.certificate | titlecase}}</h4>
+        <span class="text-muted">{{item.date}}</span>
+        <div class="observaciones">{{item.observations}}</div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
-          <edit-button routerLink="/edit-education" (click)="getFormData(image, name, certificate, date, observations)"></edit-button>
-          <delete-button></delete-button>
+          <edit-button routerLink="/edit-education" (click)="getFormData(item?.id, item?.institutionImage, item?.institutionName, item?.shortName,item?.certificate, item?.date, item?.observations)"></edit-button>
+          <delete-button (click)="deleteEducation(item?.id)"></delete-button>
         </div>
     </div>
     <add-button routerLink="/add-education" *ngIf="isLogin()"></add-button>

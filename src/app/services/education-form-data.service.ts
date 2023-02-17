@@ -17,30 +17,15 @@ export class EducationFormDataService {
     return this.recoveredData;
   }
 
-  toTitleCase(string: string) {
-    return string.split(' ').map((title) => {
-      return title.replace(title[0], title[0].toUpperCase());
-    }).join(' ');
-  }
-  toCapitalizeCase(string: string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-
-  getFormData(image: any, name: any, certificate: any, date: any, observations: any) {
-    let nameRecovered = this.toTitleCase(name.textContent);
-    let imageRecovered = image.getAttribute('src').slice(image.getAttribute('src').lastIndexOf('/') + 1, image.getAttribute('src').length);
-    let shortNameRecovered = image.getAttribute('alt').toUpperCase();
-    let certificateRecovered = this.toTitleCase(certificate.textContent);
-    let dateRecovered = date.textContent.toLowerCase();
-    let observationsRecovered = this.toCapitalizeCase(observations.textContent.toLowerCase());
-
-    let data = {
-      institutionImage: imageRecovered,
-      institutionName: nameRecovered,
-      shortName: shortNameRecovered,
-      certificate: certificateRecovered,
-      date: dateRecovered,
-      observations: observationsRecovered
+  getFormData(id: number, image: string, name: string, shortName:string, certificate: string, date: string, observations: string) {
+    const data = {
+      id: id,
+      institutionImage: image,
+      institutionName: name,
+      shortName: shortName,
+      certificate: certificate,
+      date: date,
+      observations: observations
     }
     this.setRecoveredData({...data});
   }

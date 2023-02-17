@@ -30,6 +30,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { FormEditContactComponent } from './components/form-edit-contact/form-edit-contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-skill.component';
+import { HideButtonComponent } from './components/hide-button/hide-button.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-s
     UnauthorizedComponent,
     FormEditContactComponent,
     PortfolioComponent,
-    FormEditSkillComponent
+    FormEditSkillComponent,
+    HideButtonComponent
   ],
   imports: [
     BrowserModule,

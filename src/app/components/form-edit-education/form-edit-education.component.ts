@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { EducationFormDataService } from 'src/app/services/education-form-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import Swal from 'sweetalert2';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'form-edit-education',
@@ -10,12 +12,12 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 })
 export class FormEditEducationComponent {
 
-  @ViewChild("image") image: any;
-  @ViewChild("name") name: any;
-  @ViewChild("shortName") shortName: any;
-  @ViewChild("certificate") certificate: any;
-  @ViewChild("date") date: any;
-  @ViewChild("observations") observations: any;
+  image!: string;
+  name!: string;
+  shortName!: string;
+  certificate!: string;
+  date!: string;
+  observations!: string;
 
   private recoveredData: any;
 
@@ -33,33 +35,64 @@ export class FormEditEducationComponent {
     return this.router.url;
   }
 
-  ngOnInit(): void { }
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     if (this.getUrl() == "/edit-education") {
       this.setRecoveredData(this.formData.getRecoveredData());
-      this.image.nativeElement.value = this.recoveredData.institutionImage;
-      this.name.nativeElement.value = this.recoveredData.institutionName;
-      this.shortName.nativeElement.value = this.recoveredData.shortName;
-      this.certificate.nativeElement.value = this.recoveredData.certificate;
-      this.date.nativeElement.value = this.recoveredData.date;
-      this.observations.nativeElement.value = this.recoveredData.observations;
+      this.image = this.recoveredData.institutionImage;
+      this.name = this.recoveredData.institutionName;
+      this.shortName = this.recoveredData.shortName;
+      this.certificate = this.recoveredData.certificate;
+      this.date = this.recoveredData.date;
+      this.observations = this.recoveredData.observations;
     }
   }
 
-  addNewEducation(form: any){
-    const education = `{
-      "institutionName": "${form.value.nombreInstituto}",
-      "institutionImage": "${form.value.image}",
-      "shortName": "${form.value.nombreInstitutoAbreviado}",
-      "certificate": "${form.value.titulo}",
-      "date": "${form.value.periodo}",
-      "observations": "${form.value.descripcion}",
-      "idPersona": ${1}
-    }`;
-    this.portfolioService.addNewEducation(JSON.parse(education)).subscribe(res => {
-      console.log(res);
-    });
+  sendForm(form: NgForm){
+    let education = {};
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+    })
+    if (this.getUrl() == '/add-education'){
+      education = { ...education,
+        "institutionName": this.name,
+        "institutionImage": this.image,
+        "shortName": this.shortName,
+        "certificate": this.certificate,
+        "date": this.date,
+        "observations": this.observations,
+        "idPersona": 1
+      };
+      this.portfolioService.addNewEducation(education).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha agregada una nueva educación. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
+    else {
+      education = { ...education,
+        "id": this.formData.getRecoveredData().id,
+        "institutionName": this.name,
+        "institutionImage": this.image,
+        "shortName": this.shortName,
+        "certificate": this.certificate,
+        "date": this.date,
+        "observations": this.observations,
+        "idPersona": 1
+      };
+      this.portfolioService.editEducation(education).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha actualizado una educación. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
   }
 
 }

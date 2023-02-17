@@ -26,21 +26,15 @@ export class ExperienceDataFormService {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  getDataForm(image: any, companyName: any, position: any, description: any, year: any){
-
-    let imageRecovered = image.getAttribute('src').slice(image.getAttribute('src').lastIndexOf('/') + 1, image.getAttribute('src').length);
-    let companyNameRecovered = companyName.textContent.toUpperCase();
-    let positionRecovered = this.toTitleCase(position.textContent);
-    let descriptionRecovered = this.toCapitalizeCase(description.textContent.toLowerCase());
-    let yearRecovered = year.textContent.toLowerCase();
-
-    let data = { companyImage: imageRecovered,
-      companyName: companyNameRecovered,
-      position: positionRecovered,
-      year: yearRecovered,
-      description: descriptionRecovered
+  getDataForm(id: number, image: string, companyName: string, position: string, description: string, year: string){
+    const data = {
+      id: id,
+      companyImage: image,
+      companyName: companyName,
+      position: position,
+      year: year,
+      description: description
     }
-
     this.setDataRecovered({...data});
   }
 }

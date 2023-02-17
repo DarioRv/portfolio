@@ -1,7 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ExperienceDataFormService } from 'src/app/services/experience-form-data.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'form-edit-experience',
@@ -9,11 +11,11 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
   styleUrls: ['./form-edit-experience.component.css']
 })
 export class FormEditExperienceComponent {
-  @ViewChild("image") image: any;
-  @ViewChild("name") name: any;
-  @ViewChild("position") position: any;
-  @ViewChild("year") year: any;
-  @ViewChild("description") description: any;
+  image!: string;
+  name!: string;
+  position!: string;
+  year!: string;
+  description!: string;
 
   private recoveredData: any;
 
@@ -31,30 +33,62 @@ export class FormEditExperienceComponent {
     return this.router.url;
   }
 
-  ngOnInit(): void { }
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     if (this.getUrl() == "/edit-experience"){
       this.setDataRecovered(this.formData.getDataRecovered());
-      this.image.nativeElement.value = this.recoveredData.companyImage;
-      this.name.nativeElement.value = this.recoveredData.companyName;
-      this.position.nativeElement.value = this.recoveredData.position;
-      this.year.nativeElement.value = this.recoveredData.year;
-      this.description.nativeElement.value = this.recoveredData.description;
+      this.image = this.recoveredData.companyImage;
+      this.name = this.recoveredData.companyName;
+      this.position = this.recoveredData.position;
+      this.year = this.recoveredData.year;
+      this.description = this.recoveredData.description;
     }
   }
 
-  addNewLaboralExperience(form: any) {
-    const experience = `{
-      "companyImage": "${form.value.imagen}",
-      "companyName": "${form.value.nombreEmpresa}",
-      "position": "${form.value.posicion}",
-      "year": "${form.value.periodo}",
-      "description": "${form.value.descripcion}",
-      "idPersona": ${1}
-    }`;
-    this.portfolioService.addNewLaboralExperience(JSON.parse(experience)).subscribe( res =>
-      console.log(res)
-    );
+  sendForm(form: NgForm) {
+    let experience = {};
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+    })
+
+    if (this.getUrl() == '/add-experience') {
+      experience = {...experience,
+        "companyImage": this.image,
+        "companyName": this.name,
+        "position": this.position,
+        "year": this.year,
+        "description": this.description,
+        "idPersona": 1
+      };
+      this.portfolioService.addNewLaboralExperience(experience).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha agregada una nueva experiencia laboral. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
+    else {
+      experience = {...experience,
+        "id": this.formData.getDataRecovered().id,
+        "companyImage": this.image,
+        "companyName": this.name,
+        "position": this.position,
+        "year": this.year,
+        "description": this.description,
+        "idPersona": 1
+      };
+      this.portfolioService.editLaboralExperience(experience).subscribe();
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha actualizado una experiencia laboral. Actualizando página'
+      });
+      this.router.navigateByUrl('/');
+      setTimeout(() => {window.location.reload();}, 2000);
+    }
   }
 }

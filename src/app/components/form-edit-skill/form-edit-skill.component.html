@@ -1,10 +1,10 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form action="" method="POST" #skillForm="ngForm" (submit)="addNewSkill(skillForm)">
+  <form #skillForm="ngForm" (submit)="sendForm(skillForm)">
     <h5>Anadir habilidad</h5>
     <label for="imagen">Imagen</label>
-    <input type="text" name="imagen" #name ngModel>
+    <input type="text" name="imagen" [(ngModel)]="image">
     <label for="habilidad">habilidad</label>
-    <input type="text" name="habilidad" #name ngModel>
+    <input type="text" name="habilidad" [(ngModel)]="name">
     <input type="submit" value="INGRESAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>

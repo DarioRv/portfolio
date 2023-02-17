@@ -8,8 +8,8 @@ import firebase from "firebase/compat/app"
 })
 export class AppComponent {
 
-  private readonly firebaseApiKey = '';
-  private readonly firebaseAuthDomain = '';
+  private readonly firebaseApiKey = 'AIzaSyB1iNDbdbnMBc5pPzfC0mZhf-BsUlF8R1w';
+  private readonly firebaseAuthDomain = 'portfolio-b6f85.firebaseapp.com';
 
   ngOnInit(): void{
     firebase.initializeApp({
