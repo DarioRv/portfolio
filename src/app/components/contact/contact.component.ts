@@ -10,32 +10,15 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  tel!: any;
-  email!: any;
-  linkedin!: any;
-  github!: any;
-  address!: any;
-  class: any;
+  contacts: any;
+  address!: string;
 
   constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private formData: ContactFormDataService) { }
 
   ngOnInit(): void {
     this.portfolioData.getData().subscribe(data => {
       this.address = data.personalData.address;
-      data.contact.forEach((contact: any) => {
-        if (contact.type == "tel") {
-          this.tel = { ...contact };
-        }
-        if (contact.type == "email") {
-          this.email = { ...contact };
-        }
-        if (contact.type == "linkedin") {
-          this.linkedin = { ...contact };
-        }
-        if (contact.type == "github") {
-          this.github = { ...contact };
-        }
-      });
+      this.contacts = data.contact;
     });
   }
 
@@ -43,8 +26,8 @@ export class ContactComponent {
     return this.loginService.isLogin();
   }
 
-  getFormData(id: number, address: string, alias: string, type: string, url: string, visible: boolean) {
-    this.formData.getFormData(id, address, alias, type, url, visible);
+  getFormData(id: number, alias: string, type: string, url: string, visible: boolean, icon: string) {
+    this.formData.getFormData(id, alias, type, url, visible, icon);
   }
 
   hideItem(contact: any) {

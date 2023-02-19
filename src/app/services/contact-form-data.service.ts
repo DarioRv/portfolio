@@ -16,14 +16,14 @@ export class ContactFormDataService {
     return this.recoveredData;
   }
 
-  getFormData(id: number, address: string, alias: string, type: string, url: string, visible: boolean) {
+  getFormData(id: number, alias: string, type: string, url: string, visible: boolean, icon: string) {
     const data = {
       id: id,
-      address: address,
       alias: alias,
       type: type,
       url: url,
       visible: visible,
+      icon: icon
     }
     this.setRecoveredData({...data});
   }

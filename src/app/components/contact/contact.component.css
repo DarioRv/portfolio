@@ -1,19 +1,23 @@
-.contacto .medios {
+.contacto .lista {
   font-size: 24px;
   color: #333;
   margin: 40px 0;
 }
 
-.contacto .medios a {
+.contacto .lista a {
   text-decoration: none;
   color: #333;
 }
 
-.contacto .medios i {
+.contacto .lista a:hover {
+  text-decoration: underline;
+}
+
+.contacto .lista i {
   margin-right: 5px;
 }
 
-.contacto .medios div {
+.contacto .lista div {
   width: 100%;
   max-width: 450px;
   display: flex;
@@ -22,11 +26,11 @@
   gap: 10px;
 }
 
-.contacto .medios div .edit-buttons {
+.contacto .lista div .edit-buttons {
   font-size: 16px;
 }
 
-.contacto .medios .linkedin {
+.contacto .lista .contacto-item {
   background-color: #eee;
   border-left: 5px solid #0e76a8;
   border-right: 5px solid #0e76a8;
@@ -35,66 +39,39 @@
   transition: .3s all;
 }
 
-.contacto .medios .linkedin:hover {
+.contacto .lista .contacto-item:hover {
   transform: scale(1.04);
 }
 
-.contacto .medios .linkedin i {
+.contacto .lista .linkedin i {
   color: #0e76a8;
 }
 
-.contacto .medios .email {
-  background-color: #eee;
-  border-left: 5px solid #0e76a8;
-  border-right: 5px solid #0e76a8;
-  padding: 4px 15px;
-  border-radius: 5px;
-  transition: .3s all;
-}
-
-.contacto .medios .email:hover {
-  transform: scale(1.04);
-}
-
-.contacto .medios .email i {
+.contacto .lista .email i {
   color: #7e7e7e;
 }
 
-.contacto .medios .telefono {
-  background-color: #eee;
-  border-left: 5px solid #0e76a8;
-  border-right: 5px solid #0e76a8;
-  padding: 4px 15px;
-  border-radius: 5px;
-  transition: .3s all;
-}
-
-.contacto .medios .telefono:hover {
-  transform: scale(1.04);
-}
-
-.contacto .medios .telefono i {
+.contacto .lista .telefono i {
   color: #7e7e7e;
 }
 
-.contacto .medios .github {
-  background-color: #eee;
-  border-left: 5px solid #0e76a8;
-  border-right: 5px solid #0e76a8;
-  padding: 4px 15px;
-  border-radius: 5px;
-  transition: .3s all;
-}
-
-.contacto .medios .github:hover {
-  transform: scale(1.04);
-}
-
-.contacto .medios .github i {
+.contacto .lista .github i {
   color: #171515;
 }
 
-.contacto .medios .localidad {
+.contacto .lista .facebook i {
+  color: #3b5998;
+}
+
+.contacto .lista .instagram i {
+  color: #e1306c;
+}
+
+.contacto .lista .twitter i {
+  color: #00acee;
+}
+
+.contacto .lista .localidad {
   background-color: #eee;
   border-left: 5px solid #0e76a8;
   border-right: 5px solid #0e76a8;
@@ -102,7 +79,7 @@
   border-radius: 5px;
 }
 
-.contacto .medios .localidad i {
+.contacto .lista .localidad i {
   color: #ff000f;
 }
 .contacto add-button {

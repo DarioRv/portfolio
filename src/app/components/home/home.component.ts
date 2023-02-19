@@ -26,10 +26,10 @@ export class HomeComponent {
 			this.description = data.personalData.description;
       data.contact.forEach((contact: any) => {
         if (contact.type == "tel")
-          this.tel = contact.address;
+          this.tel = contact.alias;
         if (contact.type == "email"){
           this.emailUrl = contact.url;
-          this.emailAddress = contact.address;
+          this.emailAddress = contact.alias;
 
         }
         if (contact.type == "linkedin"){

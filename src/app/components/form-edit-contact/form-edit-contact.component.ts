@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class FormEditContactComponent {
   alias!: string;
-  address!: string;
+  icon!: string;
   url!: string;
   recoveredData!: any;
   constructor (private portfolioData: PortfolioDataService, private formData: ContactFormDataService, private router: Router) {}
@@ -27,18 +27,18 @@ export class FormEditContactComponent {
   ngOnInit () {
     this.setRecoveredData(this.formData.getRecoveredData());
     this.alias = this.recoveredData.alias;
-    this.address = this.recoveredData.address;
+    this.icon = this.recoveredData.icon;
     this.url = this.recoveredData.url;
   }
 
   sendForm (form: any) {
     let contact = {
       "id": this.recoveredData.id,
-      "address": this.address,
       "alias": this.alias,
       "type": this.recoveredData.type,
       "url": this.url,
       "visible": this.recoveredData.visible,
+      "icon": this.icon,
       "idPersona": 1,
     };
     const Toast = Swal.mixin({

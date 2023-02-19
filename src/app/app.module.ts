@@ -31,6 +31,7 @@ import { FormEditContactComponent } from './components/form-edit-contact/form-ed
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-skill.component';
 import { HideButtonComponent } from './components/hide-button/hide-button.component';
+import { ShowButtonComponent } from './components/show-button/show-button.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { HideButtonComponent } from './components/hide-button/hide-button.compon
     FormEditContactComponent,
     PortfolioComponent,
     FormEditSkillComponent,
-    HideButtonComponent
+    HideButtonComponent,
+    ShowButtonComponent
   ],
   imports: [
     BrowserModule,

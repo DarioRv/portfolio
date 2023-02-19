@@ -1,43 +1,19 @@
 <section class="contacto container-fluid d-flex flex-column align-items-center" id="contacto">
   <h2 class="h2">Contacto</h2>
-  <div class="medios d-flex flex-column align-items-center gap-3">
-    <div class="linkedin d-flex justify-content-between shadow" *ngIf="linkedin?.visible || isLogin()">
-      <a [href]="linkedin?.url" target="_blank">
-        <i class="bi bi-linkedin"></i>{{linkedin?.alias}}
-      </a>
-      <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
-        <edit-button routerLink="/edit-contact" (click)="getFormData(linkedin?.id, linkedin?.address, linkedin?.alias, linkedin?.type, linkedin?.url, linkedin?.visible)"></edit-button>
-        <hide-button (click)="hideItem(linkedin)"></hide-button>
+  <div class="lista d-flex flex-column align-items-center gap-3">
+    <div *ngFor="let contact of contacts">
+      <div [class]="'contacto-item ' + contact?.type + ' d-flex justify-content-between shadow'" *ngIf="contact?.visible || isLogin()">
+        <a [href]="contact?.url" target="_blank">
+          <i [class]="'bi bi-'+contact?.icon"></i>{{contact?.alias}}
+        </a>
+        <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
+          <edit-button routerLink="/edit-contact" (click)="getFormData(contact?.id, contact?.alias, contact?.type, contact?.url, contact?.visible, contact?.icon)"></edit-button>
+          <hide-button (click)="hideItem(contact)" *ngIf="contact?.visible"></hide-button>
+          <show-button (click)="hideItem(contact)" *ngIf="!contact?.visible"></show-button>
+        </div>
       </div>
     </div>
-    <div class="email d-flex justify-content-between shadow" *ngIf="email?.visible || isLogin()">
-      <a [href]="email?.url">
-        <i class="bi bi-envelope-fill"></i>{{email?.address}}
-      </a>
-      <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
-        <edit-button routerLink="/edit-contact" (click)="getFormData(email?.id, email?.address, email?.alias, email?.type, email?.url, email?.visible)"></edit-button>
-        <hide-button (click)="hideItem(email)"></hide-button>
-      </div>
-    </div>
-    <div class="telefono d-flex justify-content-between shadow" *ngIf="tel?.visible  || isLogin()">
-      <a [href]="tel?.url">
-        <span><i class="bi bi-telephone-fill"></i>{{tel?.address}}</span>
-      </a>
-      <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
-        <edit-button routerLink="/edit-contact" (click)="getFormData(tel?.id, tel?.address, tel?.alias, tel?.type, tel?.url, tel?.visible)"></edit-button>
-        <hide-button (click)="hideItem(tel)"></hide-button>
-      </div>
-    </div>
-    <div class="github d-flex justify-content-between shadow" *ngIf="github?.visible || isLogin()">
-      <a [href]="github?.url" target="_blank">
-        <i class="bi bi-github"></i>{{github?.alias}}
-      </a>
-      <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
-        <edit-button routerLink="/edit-contact" (click)="getFormData(github?.id, github?.address, github?.alias, github?.type, github?.url, github?.visible)"></edit-button>
-        <hide-button (click)="hideItem(github)"></hide-button>
-      </div>
-    </div>
-    <div class="localidad d-flex justify-content-between shadow"><span><i class="bi bi-geo-alt-fill"></i>{{address}}</span>
+    <div class="contacto-item localidad d-flex justify-content-between shadow"><span><i class="bi bi-geo-alt-fill"></i>{{address}}</span>
     </div>
   </div>
 </section>
