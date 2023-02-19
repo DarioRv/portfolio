@@ -39,7 +39,7 @@ export class ProjectsComponent {
 
   deleteProject(id: number) {
     Swal.fire({
-      title: '¿Esta seguro de eliminar este elemento',
+      title: '¿Está seguro de eliminar este elemento?',
       icon: 'info',
       showConfirmButton: true,
       showDenyButton: true,

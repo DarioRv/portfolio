@@ -66,6 +66,11 @@
   border-right: 5px solid #0e76a8;
   padding: 4px 15px;
   border-radius: 5px;
+  transition: .3s all;
+}
+
+.contacto .medios .telefono:hover {
+  transform: scale(1.04);
 }
 
 .contacto .medios .telefono i {

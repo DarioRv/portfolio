@@ -72,10 +72,10 @@ export class PortfolioDataService {
     return this.http.post(`${this.API}/new/contact`, contact)
   }
   editContact(contact: any): Observable<any> {
-    return this.http.put(`${this.API}/new/contact`, contact)
+    return this.http.put(`${this.API}/update/contact`, contact)
   }
   deleteContact(contactId: any): Observable<any> {
-    return this.http.delete(`${this.API}/new/contact?id=${contactId}`)
+    return this.http.delete(`${this.API}/delete/contact?id=${contactId}`)
   }
   getContact(): Observable<any> {
     return this.http.get(`${this.API}/view/contacts`)
