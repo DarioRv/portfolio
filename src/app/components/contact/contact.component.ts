@@ -30,7 +30,7 @@ export class ContactComponent {
     this.formData.getFormData(id, alias, type, url, visible, icon);
   }
 
-  hideItem(contact: any) {
+  toggleVisibility(contact: any) {
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',

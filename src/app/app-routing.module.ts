@@ -20,20 +20,22 @@ import { FormEditProjectComponent } from './components/form-edit-project/form-ed
 import { LoginGuardian } from './components/login/login-guardian';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { FormEditSkillComponent } from './components/form-edit-skill/form-edit-skill.component';
+import { FormEditPersonalDataComponent } from './components/form-edit-personal-data/form-edit-personal-data.component';
 
 const routes: Routes = [
-	{path: "login", component: LoginComponent},
-  {path: "edit-experience", component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
-  {path: "add-experience", component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
-  {path: "edit-education", component: FormEditEducationComponent, canActivate: [LoginGuardian]},
-  {path: "add-education", component: FormEditEducationComponent, canActivate: [LoginGuardian]},
-  {path: "edit-project", component: FormEditProjectComponent, canActivate: [LoginGuardian]},
-  {path: "add-project", component: FormEditProjectComponent, canActivate: [LoginGuardian]},
-  {path: "edit-contact", component: FormEditContactComponent, canActivate: [LoginGuardian]},
-  {path: "add-skill", component: FormEditSkillComponent, canActivate: [LoginGuardian]},
-	{path: "", redirectTo: "", pathMatch: "full"},
-  {path: "unauthorized", component: UnauthorizedComponent},
-	{path: "**", component: ErrorComponent}
+	{path: 'login', component: LoginComponent},
+  {path: 'edit-personal-data', component: FormEditPersonalDataComponent, canActivate: [LoginGuardian]},
+  {path: 'edit-experience', component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
+  {path: 'add-experience', component: FormEditExperienceComponent, canActivate: [LoginGuardian]},
+  {path: 'edit-education', component: FormEditEducationComponent, canActivate: [LoginGuardian]},
+  {path: 'add-education', component: FormEditEducationComponent, canActivate: [LoginGuardian]},
+  {path: 'edit-project', component: FormEditProjectComponent, canActivate: [LoginGuardian]},
+  {path: 'add-project', component: FormEditProjectComponent, canActivate: [LoginGuardian]},
+  {path: 'edit-contact', component: FormEditContactComponent, canActivate: [LoginGuardian]},
+  {path: 'add-skill', component: FormEditSkillComponent, canActivate: [LoginGuardian]},
+	{path: '', redirectTo: '', pathMatch: 'full'},
+  {path: 'unauthorized', component: UnauthorizedComponent},
+	{path: '**', component: ErrorComponent}
 ];
 
 @NgModule({

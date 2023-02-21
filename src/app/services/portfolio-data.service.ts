@@ -16,6 +16,10 @@ export class PortfolioDataService {
     return this.http.get(`${this.API}/get/portfolio?id=1`);
   }
 
+  updatePerson(person: any): Observable<any> {
+    return this.http.put(`${this.API}/update/persona`, person);
+  }
+
   addNewLaboralExperience(experience: any): Observable<any> {
     return this.http.post(`${this.API}/new/laboral-experience`, experience);
   }
