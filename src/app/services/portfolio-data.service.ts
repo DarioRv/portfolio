@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioDataService {
 
-  private API = 'http://localhost:8080';
+  private readonly API = 'http://localhost:8080';
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
     return this.http.get(`${this.API}/get/portfolio?id=1`);
   }
 
-  updatePerson(person: any): Observable<any> {
-    return this.http.put(`${this.API}/update/persona`, person);
+  updatePersonalData(person: any): Observable<any> {
+    return this.http.put(`${this.API}/update/personal-data`, person);
   }
 
   addNewLaboralExperience(experience: any): Observable<any> {

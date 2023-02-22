@@ -51,7 +51,7 @@ export class FormEditPersonalDataComponent {
       timer: 2000,
       timerProgressBar: true,
     })
-    this.portfolioData.updatePerson(personalData).subscribe();
+    this.portfolioData.updatePersonalData(personalData).subscribe();
       Toast.fire({
         icon: 'success',
         title: 'Se ha edita la información personal. Actualizando página'
