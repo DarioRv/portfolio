@@ -29,15 +29,11 @@
   border-radius: 5px;
 }
 
-.experiencia .item h3 {
-  color: #922b3f;
-}
-
 .experiencia .item .año {
-  width: 50%;
+  width: fit-content;
   font-size: 1.2rem;
-  color: #6c757d;
   font-weight: bold;
+  color: #922b3f;
 }
 
 .experiencia add-button {

@@ -6,16 +6,16 @@
   padding: 20px 15px;
 }
 
+.estudios .formacion .instituto h3 {
+  color: #f44769;
+}
+
 .estudios .formacion .instituto .logo {
   width: 50px;
 }
 
 .estudios .formacion .instituto img {
   border-radius: 3px;
-}
-
-.estudios .formacion .instituto h3 {
-  color: #922b3f;
 }
 
 .estudios add-button {

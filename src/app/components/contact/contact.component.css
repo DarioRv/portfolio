@@ -24,22 +24,17 @@
 }
 
 .contacto .lista .contacto-item {
-  border-left: 5px solid #f44769;
-  border-right: 5px solid #f44769;
+  background-color: #2e3031;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   padding: 4px 15px;
   border-radius: 5px;
   transition: .3s all;
 }
 
 .contacto .lista .contacto-item:hover {
-  transform: scale(1.04);
-}
-
-.contacto .lista .localidad {
   border-left: 5px solid #f44769;
   border-right: 5px solid #f44769;
-  padding: 4px 15px;
-  border-radius: 5px;
 }
 
 .contacto add-button {
