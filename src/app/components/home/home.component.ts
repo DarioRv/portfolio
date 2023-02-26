@@ -11,11 +11,13 @@ export class HomeComponent {
 	position: string = "";
 	description: string = "";
 	tel: string = "";
+  telUrl: string = "";
 	emailUrl: string = "";
 	emailAddress: string = "";
 	linkedinUrl: string = "";
 	linkedinAlias: string = "";
   githubUrl: string = "";
+  githubAlias: string = "";
 
 	constructor(private portfolioData: PortfolioDataService){}
 
@@ -25,19 +27,22 @@ export class HomeComponent {
 			this.position = data.personalData.position;
 			this.description = data.personalData.description;
       data.contact.forEach((contact: any) => {
-        if (contact.type == "tel")
+        if (contact.type == "tel") {
           this.tel = contact.alias;
-        if (contact.type == "email"){
+          this.telUrl = contact.url;
+        }
+        if (contact.type == "email") {
           this.emailUrl = contact.url;
           this.emailAddress = contact.alias;
 
         }
-        if (contact.type == "linkedin"){
+        if (contact.type == "linkedin") {
           this.linkedinUrl = contact.url;
           this.linkedinAlias = contact.alias;
         }
-        if (contact.type == "github"){
+        if (contact.type == "github") {
           this.githubUrl = contact.url;
+          this.githubAlias = contact.alias;
         }
       });
 		});

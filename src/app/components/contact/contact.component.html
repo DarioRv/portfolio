@@ -1,9 +1,9 @@
-<section class="contacto container-fluid d-flex flex-column align-items-center" id="contacto">
-  <h2 class="h2">Contacto</h2>
+<section class="contacto bg-dark container-fluid d-flex flex-column align-items-center" id="contacto">
+  <h2 class="h2 text-white">Contacto</h2>
   <div class="lista d-flex flex-column align-items-center gap-2">
-    <div *ngFor="let contact of contacts">
-      <div [class]="'contacto-item ' + contact?.type + ' d-flex justify-content-between shadow'" *ngIf="contact?.visible || isLogin()">
-        <a [href]="contact?.url" target="_blank">
+    <div class="d-flex justify-content-between align-items-center gap-3" *ngFor="let contact of contacts">
+      <div [class]="'contacto-item ' + contact?.type + ' bg-dark d-flex align-items-center justify-content-between shadow'" *ngIf="contact?.visible || isLogin()">
+        <a [href]="contact?.url" target="_blank" class="text-white">
           <i [class]="'bi bi-'+contact?.icon"></i>{{contact?.alias}}
         </a>
         <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div class="contacto-item localidad d-flex justify-content-between shadow"><span><i class="bi bi-geo-alt-fill"></i>{{address}}</span>
+    <div class="contacto-item bg-dark text-white localidad d-flex justify-content-between shadow"><span><i class="bi bi-geo-alt-fill"></i>{{address}}</span>
     </div>
   </div>
 </section>

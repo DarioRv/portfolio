@@ -1,20 +1,24 @@
-<section class="proyectos container-fluid d-flex flex-column align-items-center" id="proyectos" *ngIf="loadedData">
-    <h2 class="h2">Proyectos</h2>
+<section class="proyectos bg-dark container-fluid d-flex flex-column align-items-center" id="proyectos" *ngIf="loadedData">
+    <h2 class="h2 text-white">Proyectos</h2>
     <div class="lista justify-content-center justify-content-xl-between">
     <div *ngFor="let project of projects.reverse()" class="proyecto d-flex flex-column flex-md-row justify-content-md-between gap-5 shadow">
-        <!-- <div class="muestra">
-            <iframe [src]="project.url | safe"></iframe>
-        </div> -->
-        <div class="detalles">
-            <h3 #name>{{project.projectName | uppercase}}</h3>
-            <h4 class="text-muted" #date>{{project.date}}</h4>
-            <p #description>{{project.description}}</p>
-            <a [href]="project.url" target="_blank" #url>Ir al sitio <i class="bi bi-link-45deg"></i></a>
-            <h5>Tecnologías Implementadas</h5>
-            <div class="tecnologias-implementadas d-flex gap-1 flex-wrap" #technologies>
+        <div class="detalles text-white">
+            <h3>{{project.projectName | uppercase}}</h3>
+            <h4 class="text-muted">{{project.date}}</h4>
+            <p>{{project.description}}</p>
+            <h5 class="mt-3">Tecnologías Implementadas</h5>
+            <div class="tecnologias-implementadas d-flex gap-1 flex-wrap mb-5">
               <div *ngFor="let technology of project.implementedTechnologies.split(',')"  class="image">
                 <img [src]="'../../../assets/images/'+ technology.trim() +'.png'" [alt]="'Icono de ' + technology">
               </div>
+            </div>
+            <div class="links d-flex gap-1">
+              <button>
+                <a [href]="project.url" target="_blank"><i class="bi bi-globe-americas"></i> Ir al sitio</a>
+              </button>
+              <button>
+                <a [href]="project.url" target="_blank"><i class="bi bi-github"></i> Ver código</a>
+              </button>
             </div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">

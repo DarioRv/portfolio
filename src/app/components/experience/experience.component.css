@@ -1,7 +1,23 @@
 .experiencia .item {
   width: 80%;
-  margin: 40px 0;
-  border-bottom: 2px solid #dbdbdb;
+  height: fit-content;
+}
+
+.experiencia .item .linea-tiempo {
+  width: 200px;
+  min-height: 150px;
+  line-height: 0;
+}
+
+.experiencia .item .linea-tiempo i {
+  font-size: 24px;
+  color: #922b3f;
+}
+
+.experiencia .item .linea-tiempo .linea {
+  background-color: #922b3f;
+  width: 2px;
+  height: 100%;
 }
 
 .experiencia .item .logo-empresa {
@@ -9,16 +25,17 @@
 }
 
 .experiencia .item .logo-empresa img {
+  width: 100%;
   border-radius: 5px;
 }
 
-.experiencia .item .detalles p {
-  text-align: left;
+.experiencia .item h3 {
+  color: #922b3f;
 }
 
 .experiencia .item .año {
   width: 50%;
-  font-size: 36px;
+  font-size: 1.2rem;
   color: #6c757d;
   font-weight: bold;
 }

@@ -1,12 +1,12 @@
 .contacto .lista {
   width: 80%;
-  font-size: 24px;
   color: #333;
   margin: 40px 0;
 }
 
 .contacto .lista a {
   text-decoration: none;
+  font-size: 16px;
   color: #333;
 }
 
@@ -21,20 +21,11 @@
 .contacto .lista div {
   width: 100%;
   max-width: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.contacto .lista div .edit-buttons {
-  font-size: 16px;
 }
 
 .contacto .lista .contacto-item {
-  background-color: #eee;
-  border-left: 5px solid #0e76a8;
-  border-right: 5px solid #0e76a8;
+  border-left: 5px solid #f44769;
+  border-right: 5px solid #f44769;
   padding: 4px 15px;
   border-radius: 5px;
   transition: .3s all;
@@ -44,45 +35,13 @@
   transform: scale(1.04);
 }
 
-.contacto .lista .linkedin i {
-  color: #0e76a8;
-}
-
-.contacto .lista .email i {
-  color: #7e7e7e;
-}
-
-.contacto .lista .telefono i {
-  color: #7e7e7e;
-}
-
-.contacto .lista .github i {
-  color: #171515;
-}
-
-.contacto .lista .facebook i {
-  color: #3b5998;
-}
-
-.contacto .lista .instagram i {
-  color: #e1306c;
-}
-
-.contacto .lista .twitter i {
-  color: #00acee;
-}
-
 .contacto .lista .localidad {
-  background-color: #eee;
-  border-left: 5px solid #0e76a8;
-  border-right: 5px solid #0e76a8;
+  border-left: 5px solid #f44769;
+  border-right: 5px solid #f44769;
   padding: 4px 15px;
   border-radius: 5px;
 }
 
-.contacto .lista .localidad i {
-  color: #ff000f;
-}
 .contacto add-button {
   width: 100%;
   max-width: 450px;

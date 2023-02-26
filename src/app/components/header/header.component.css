@@ -7,22 +7,19 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
+  color: #f44769;
 }
 
 .navbar-collapse button {
-  height: 40px;
-  background-color: #2ec7ba;
-  padding: 2px 10px;
+  background-color: #f44769;
+  padding: 5px 10px;
   border: none;
   border-radius: 10px;
   margin: 3px 10px;
   color: #fff;
-  font-size: 16px;
-  font-weight: bold;
   transition: .3s all;
 }
 
 .navbar-collapse button:hover {
-  background-color: #39aca3;
+  background-color: #922b3f;
 }

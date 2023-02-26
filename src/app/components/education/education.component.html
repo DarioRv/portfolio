@@ -1,14 +1,14 @@
-<section class="estudios container-fluid d-flex flex-column align-items-center" id="estudios" *ngIf="loadedData">
-    <h2 class="h2">Estudios</h2>
-    <div *ngFor="let item of education.reverse()" class="formacion d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-between">
+<section class="estudios bg-dark container-fluid d-flex flex-column align-items-center" id="estudios" *ngIf="loadedData">
+    <h2 class="h2 text-white">Estudios</h2>
+    <div *ngFor="let item of education?.reverse()" class="formacion d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-between">
         <div class="details">
         <div class="instituto d-flex align-items-center gap-3">
             <img [src]="'../../../assets/images/' + item.institutionImage" [alt]="item.shortName" class="logo img-fluid">
             <h3>{{item.institutionName | titlecase}}</h3>
         </div>
         <h4 class="text-muted">{{item.certificate | titlecase}}</h4>
-        <span class="text-muted">{{item.date}}</span>
-        <div class="observaciones">{{item.observations}}</div>
+        <span class="text-white">{{item.date}}</span>
+        <div class="observaciones text-white mt-3">{{item.observations}}</div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
           <edit-button routerLink="/edit-education" (click)="getFormData(item?.id, item?.institutionImage, item?.institutionName, item?.shortName,item?.certificate, item?.date, item?.observations)"></edit-button>

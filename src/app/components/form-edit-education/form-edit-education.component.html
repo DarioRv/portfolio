@@ -1,19 +1,19 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form action="" method="POST" #educationForm="ngForm" (ngSubmit)="sendForm(educationForm)">
-    <h5 *ngIf="getUrl() == '/add-education'">Agregar Educación</h5>
-    <h5 *ngIf="getUrl() == '/edit-education'">Editar Educación</h5>
+  <form class="bg-dark" #educationForm="ngForm" (ngSubmit)="sendForm(educationForm)">
+    <h5 class="text-white" *ngIf="getUrl() == '/add-education'">Agregar Educación</h5>
+    <h5 class="text-white" *ngIf="getUrl() == '/edit-education'">Editar Educación</h5>
     <label for="image">Imagen</label>
-    <input type="text" name="image" autocomplete="none" [(ngModel)]="image">
+    <input type="text" name="image" autocomplete="off" [(ngModel)]="image">
     <label for="nombreInstituto">Nombre del instituto</label>
-    <input type="text" name="nombreInstituto" autocomplete="none" [(ngModel)]="name">
+    <input type="text" name="nombreInstituto" autocomplete="off" [(ngModel)]="name">
     <label for="nombreInstitutoAbreviado">Nombre abreviado</label>
-    <input type="text" name="nombreInstitutoAbreviado" [(ngModel)]="shortName">
+    <input type="text" name="nombreInstitutoAbreviado" autocomplete="off" [(ngModel)]="shortName">
     <label for="titulo">Titulo</label>
-    <input type="text" name="titulo" autocomplete="none" [(ngModel)]="certificate">
+    <input type="text" name="titulo" autocomplete="off" [(ngModel)]="certificate">
     <label for="periodo">Periodo</label>
-    <input type="text" name="periodo" autocomplete="none" [(ngModel)]="date">
+    <input type="text" name="periodo" autocomplete="off" [(ngModel)]="date">
     <label for="descripcion">Descripcion</label>
-    <textarea name="descripcion" autocomplete="none" [(ngModel)]="observations"></textarea>
+    <textarea name="descripcion" autocomplete="off" [(ngModel)]="observations"></textarea>
     <input type="submit" value="INGRESAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>

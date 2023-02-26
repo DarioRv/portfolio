@@ -1,5 +1,5 @@
 .sobre-mi {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .sobre-mi .detalles {
   width: 80%;
@@ -7,7 +7,6 @@
 }
 
 .sobre-mi h2 + p{
-  width: 80%;
   margin: 20px 0;
 }
 
@@ -16,5 +15,5 @@
 }
 
 .sobre-mi span {
-  color: #39aca3;
+  color: #f44769;
 }

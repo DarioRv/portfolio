@@ -11,30 +11,16 @@
   width: 80%;
   max-width: 800px;
   height: fit-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
   border-radius: 10px;
-  border: 2px solid #39aca3;
-  padding: 40px;
-  margin: 20px 0;
-  background-color: #fff;
+  border: 2px solid #f44769;
   overflow: auto;
-}
-
-.container-form form h5 {
-  font-size: 26px;
-  text-align: center;
-  color: #333;
 }
 
 .container-form form label {
   width: 100%;
   min-width: 200px;
   max-width: 400px;
-  font-size: 26px;
-  color: #39aca3;
+  color: #f44769;
 }
 
 .container-form form input {
@@ -42,39 +28,37 @@
   min-width: 200px;
   max-width: 400px;
   height: 40px;
+  background-color: transparent;
   border: none;
   outline: none;
-  font-size: 22px;
   color: #7e7e7e;
 }
 
 .container-form form input[type="text"], .container-form form input[type="password"] {
-  border-bottom: 3px solid #dbdbdb;
+  border-bottom: 3px solid #2e3031;
   padding: 8px 0;
 }
 
 .container-form form input[type="text"]:focus, .container-form form input[type="password"]:focus {
-  border-color: #39aca3;
-  color: #333;
+  border-color: #f44769;
 }
 
 .container-form form input[type="submit"] {
   border-radius: 5px;
   color: #fff;
-  background-color: #39aca3;
-  font-size: 22px;
+  background-color: #f44769;
   transition: .3s all;
 }
 
 .container-form form input[type="button"] {
   border-radius: 5px;
   border: none;
-  border-color: #39aca3;
-  color: #39aca3;
+  border-color: #f44769;
+  color: #f44769;
   transition: .3s all;
 }
 
 .container-form form input[type="button"]:hover {
-  background-color: #39aca3;
+  background-color: #f44769;
   color: #fff;
 }

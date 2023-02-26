@@ -1,5 +1,5 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-    <form class="shadow-lg" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+    <form class="d-flex flex-column align-items-center gap-3 p-5 mx-3 bg-dark shadow-lg" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
         <label for="user">Correo</label>
         <input type="text" name="email" id="email" placeholder="Tu email" autocomplete="off" ngModel>
         <label for="password">Contraseña</label>

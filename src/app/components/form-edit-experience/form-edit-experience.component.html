@@ -1,17 +1,17 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form #experienceForm="ngForm" (submit)="sendForm(experienceForm)">
-    <h5 *ngIf="getUrl() == '/add-experience'">Agregar Experiencia Laboral</h5>
-    <h5 *ngIf="getUrl() == '/edit-experience'">Editar Experiencia Laboral</h5>
+  <form class="bg-dark" #experienceForm="ngForm" (submit)="sendForm(experienceForm)">
+    <h5 class="text-white" *ngIf="getUrl() == '/add-experience'">Agregar Experiencia Laboral</h5>
+    <h5 class="text-white" *ngIf="getUrl() == '/edit-experience'">Editar Experiencia Laboral</h5>
     <label for="image">Imagen</label>
-    <input type="text" name="imagen" autocomplete="none" [(ngModel)]="image">
+    <input type="text" name="imagen" autocomplete="off" [(ngModel)]="image">
     <label for="nombre-empresa">Nombre de la empresa</label>
-    <input type="text" name="nombreEmpresa" autocomplete="none" [(ngModel)]="name">
+    <input type="text" name="nombreEmpresa" autocomplete="off" [(ngModel)]="name">
     <label for="posicion">Posición</label>
-    <input type="text" name="posicion" autocomplete="none" [(ngModel)]="position">
+    <input type="text" name="posicion" autocomplete="off" [(ngModel)]="position">
     <label for="periodo">Periodo</label>
-    <input type="text" name="periodo" autocomplete="none" [(ngModel)]="year">
+    <input type="text" name="periodo" autocomplete="off" [(ngModel)]="year">
     <label for="descripcion">Descripcion</label>
-    <textarea name="descripcion" autocomplete="none" [(ngModel)]="description"></textarea>
+    <textarea name="descripcion" autocomplete="off" [(ngModel)]="description"></textarea>
     <input type="submit" value="INGRESAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>

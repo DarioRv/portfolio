@@ -1,18 +1,18 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form #contactForm="ngForm" (submit)="sendForm(contactForm)">
-    <h5>Editar Información Personal</h5>
+  <form class="bg-dark" #contactForm="ngForm" (submit)="sendForm(contactForm)">
+    <h5 class="text-white">Editar Información Personal</h5>
     <label for="nombre">Nombre completo</label>
-    <input type="text" name="nombre" [(ngModel)]="name">
+    <input type="text" name="nombre" autocomplete="off" [(ngModel)]="name">
     <label for="posicion">Posición</label>
-    <input type="text" name="posicion" [(ngModel)]="position">
+    <input type="text" name="posicion" autocomplete="off" [(ngModel)]="position">
     <label for="descripcion">Descripcion de posición</label>
-    <input type="text" name="descripcion" [(ngModel)]="description">
+    <input type="text" name="descripcion" autocomplete="off" [(ngModel)]="description">
     <label for="edad">Edad</label>
-    <input type="text" name="edad" [(ngModel)]="age">
+    <input type="text" name="edad" autocomplete="off" [(ngModel)]="age">
     <label for="nacionalidad">Nacionalidad</label>
-    <input type="text" name="nacionalidad" [(ngModel)]="nacionality">
+    <input type="text" name="nacionalidad" autocomplete="off" [(ngModel)]="nacionality">
     <label for="localidad">Localidad</label>
-    <input type="text" name="localidad" [(ngModel)]="address">
+    <input type="text" name="localidad" autocomplete="off" [(ngModel)]="address">
     <label for="sobre">Sobre</label>
     <textarea name="sobre" [(ngModel)]="about"></textarea>
     <input type="submit" value="EDITAR">

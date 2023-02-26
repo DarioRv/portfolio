@@ -1,12 +1,12 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
-  <form #contactForm="ngForm" (submit)="sendForm(contactForm)">
-    <h5>Editar Contacto</h5>
+  <form class="bg-dark" #contactForm="ngForm" (submit)="sendForm(contactForm)">
+    <h5 class="text-white">Editar Contacto</h5>
     <label for="alias">Nuevo alias</label>
-    <input type="text" name="alias" [(ngModel)]="alias">
+    <input type="text" name="alias" autocomplete="off" [(ngModel)]="alias">
     <label for="icon">Icono</label>
-    <input type="text" name="icon" [(ngModel)]="icon">
+    <input type="text" name="icon" autocomplete="off" [(ngModel)]="icon">
     <label for="url">URL</label>
-    <input type="text" name="url" [(ngModel)]="url">
+    <input type="text" name="url" autocomplete="off" [(ngModel)]="url">
     <input type="submit" value="EDITAR">
     <input type="button" value="CANCELAR" routerLink="">
   </form>
