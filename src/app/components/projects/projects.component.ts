@@ -3,7 +3,7 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 import { LoginService } from 'src/app/services/login.service';
-import { ProjectFormDataService } from 'src/app/services/project-form-data.service';
+import { ProjectFormDataService } from 'src/app/services/project-data.service';
 import Swal from 'sweetalert2';
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
@@ -21,7 +21,7 @@ export class SafePipe implements PipeTransform {
 export class ProjectsComponent {
 	projects: any;
   loadedData: boolean = false;
-	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private getDataForm: ProjectFormDataService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private projectData: ProjectFormDataService){}
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
 			this.projects = data.projects;
@@ -34,7 +34,7 @@ export class ProjectsComponent {
 	}
 
   getData(id: number, name: string, date: string, description: string, url: string, technologies: string) {
-    this.getDataForm.getDataForm(id, name, date, description, url, technologies);
+    this.projectData.getForm(id, name, date, description, url, technologies);
   }
 
   deleteProject(id: number) {

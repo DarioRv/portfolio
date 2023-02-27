@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
-import { ContactFormDataService } from 'src/app/services/contact-form-data.service';
+import { ContactFormDataService } from 'src/app/services/contact-data.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,7 +13,7 @@ export class ContactComponent {
   contacts: any;
   address!: string;
 
-  constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private formData: ContactFormDataService) { }
+  constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private contactData: ContactFormDataService) { }
 
   ngOnInit(): void {
     this.portfolioData.getData().subscribe(data => {
@@ -26,8 +26,8 @@ export class ContactComponent {
     return this.loginService.isLogin();
   }
 
-  getFormData(id: number, alias: string, type: string, url: string, visible: boolean, icon: string) {
-    this.formData.getFormData(id, alias, type, url, visible, icon);
+  getData(id: number, alias: string, type: string, url: string, visible: boolean, icon: string) {
+    this.contactData.getData(id, alias, type, url, visible, icon);
   }
 
   toggleVisibility(contact: any) {

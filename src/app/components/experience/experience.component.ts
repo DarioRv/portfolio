@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
-import { ExperienceDataFormService } from 'src/app/services/experience-form-data.service';
+import { ExperienceDataFormService } from 'src/app/services/experience-data.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,7 +13,7 @@ export class ExperienceComponent {
   loadedData: boolean = false;
 	laboralExperience: any;
 
-	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private getDataForm: ExperienceDataFormService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private experienceData: ExperienceDataFormService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
@@ -28,8 +28,9 @@ export class ExperienceComponent {
 	}
 
   getData(id: number, image: string, companyName: string, position: string, description: string, year: string){
-    this.getDataForm.getDataForm(id, image, companyName, position, description, year);
+    this.experienceData.getForm(id, image, companyName, position, description, year);
   }
+
   deleteLaboralExperience(id: number) {
     Swal.fire({
       title: '¿Está seguro de eliminar este elemento?',

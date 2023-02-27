@@ -26,7 +26,7 @@ export class ExperienceDataFormService {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  getDataForm(id: number, image: string, companyName: string, position: string, description: string, year: string){
+  getForm(id: number, image: string, companyName: string, position: string, description: string, year: string){
     const data = {
       id: id,
       companyImage: image,

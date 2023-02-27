@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ContactFormDataService } from 'src/app/services/contact-form-data.service';
+import { ContactFormDataService } from 'src/app/services/contact-data.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import Swal from 'sweetalert2';
 
@@ -13,31 +13,21 @@ export class FormEditContactComponent {
   alias!: string;
   icon!: string;
   url!: string;
-  recoveredData!: any;
-  constructor (private portfolioData: PortfolioDataService, private formData: ContactFormDataService, private router: Router) {}
-
-  setRecoveredData(data: any) {
-    this.recoveredData = data;
-  }
-
-  getRecoveredData() {
-    return this.recoveredData;
-  }
+  constructor (private portfolioData: PortfolioDataService, private contactData: ContactFormDataService, private router: Router) {}
 
   ngOnInit () {
-    this.setRecoveredData(this.formData.getRecoveredData());
-    this.alias = this.recoveredData.alias;
-    this.icon = this.recoveredData.icon;
-    this.url = this.recoveredData.url;
+    this.alias = this.contactData.getRecoveredData().alias;
+    this.icon = this.contactData.getRecoveredData().icon;
+    this.url = this.contactData.getRecoveredData().url;
   }
 
   sendForm (form: any) {
     let contact = {
-      "id": this.recoveredData.id,
+      "id": this.contactData.getRecoveredData().id,
       "alias": this.alias,
-      "type": this.recoveredData.type,
+      "type": this.contactData.getRecoveredData().type,
       "url": this.url,
-      "visible": this.recoveredData.visible,
+      "visible": this.contactData.getRecoveredData().visible,
       "icon": this.icon,
       "idPersona": 1,
     };

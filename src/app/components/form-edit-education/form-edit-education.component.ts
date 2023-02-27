@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { EducationFormDataService } from 'src/app/services/education-form-data.service';
+import { EducationFormDataService } from 'src/app/services/education-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import Swal from 'sweetalert2';
@@ -19,17 +19,7 @@ export class FormEditEducationComponent {
   date!: string;
   observations!: string;
 
-  private recoveredData: any;
-
-  constructor(private formData: EducationFormDataService, private router: Router, private portfolioService: PortfolioDataService) {}
-
-  setRecoveredData(data: any) {
-    this.recoveredData = data;
-  }
-
-  getRecoveredData() {
-    return this.recoveredData;
-  }
+  constructor(private educationData: EducationFormDataService, private router: Router, private portfolioService: PortfolioDataService) {}
 
   getUrl() {
     return this.router.url;
@@ -37,13 +27,12 @@ export class FormEditEducationComponent {
 
   ngOnInit(): void {
     if (this.getUrl() == "/edit-education") {
-      this.setRecoveredData(this.formData.getRecoveredData());
-      this.image = this.recoveredData.institutionImage;
-      this.name = this.recoveredData.institutionName;
-      this.shortName = this.recoveredData.shortName;
-      this.certificate = this.recoveredData.certificate;
-      this.date = this.recoveredData.date;
-      this.observations = this.recoveredData.observations;
+      this.image = this.educationData.getRecoveredData().institutionImage;
+      this.name = this.educationData.getRecoveredData().institutionName;
+      this.shortName = this.educationData.getRecoveredData().shortName;
+      this.certificate = this.educationData.getRecoveredData().certificate;
+      this.date = this.educationData.getRecoveredData().date;
+      this.observations = this.educationData.getRecoveredData().observations;
     }
   }
 
@@ -76,7 +65,7 @@ export class FormEditEducationComponent {
     }
     else {
       education = { ...education,
-        "id": this.formData.getRecoveredData().id,
+        "id": this.educationData.getRecoveredData().id,
         "institutionName": this.name,
         "institutionImage": this.image,
         "shortName": this.shortName,

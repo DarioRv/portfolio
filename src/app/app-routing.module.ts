@@ -32,6 +32,7 @@ const routes: Routes = [
   {path: 'edit-project', component: FormEditProjectComponent, canActivate: [LoginGuardian]},
   {path: 'add-project', component: FormEditProjectComponent, canActivate: [LoginGuardian]},
   {path: 'edit-contact', component: FormEditContactComponent, canActivate: [LoginGuardian]},
+  {path: 'edit-skill', component: FormEditSkillComponent, canActivate: [LoginGuardian]},
   {path: 'add-skill', component: FormEditSkillComponent, canActivate: [LoginGuardian]},
 	{path: '', redirectTo: '', pathMatch: 'full'},
   {path: 'unauthorized', component: UnauthorizedComponent},

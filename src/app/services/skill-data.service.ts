@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EducationFormDataService {
-
+export class SkillDataService {
   private recoveredData: any;
 
   constructor() { }
@@ -17,15 +16,11 @@ export class EducationFormDataService {
     return this.recoveredData;
   }
 
-  getFormData(id: number, image: string, name: string, shortName:string, certificate: string, date: string, observations: string) {
+  getData(id: number, name: string, image: string) {
     const data = {
       id: id,
-      institutionImage: image,
-      institutionName: name,
-      shortName: shortName,
-      certificate: certificate,
-      date: date,
-      observations: observations
+      name: name,
+      image: image
     }
     this.setRecoveredData({...data});
   }

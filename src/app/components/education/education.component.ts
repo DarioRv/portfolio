@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
-import { EducationFormDataService } from 'src/app/services/education-form-data.service';
+import { EducationFormDataService } from 'src/app/services/education-data.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -14,7 +14,7 @@ export class EducationComponent {
   education: any;
   loadedData: boolean = false;
 
-	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private FormData: EducationFormDataService){}
+	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private educationData: EducationFormDataService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
@@ -29,8 +29,8 @@ export class EducationComponent {
 	logout(){
 		this.loginService.logout();
 	}
-  getFormData(id: number, image: string, name: string, shortName: string, certificate: string, date: string, observations: string){
-    this.FormData.getFormData(id, image, name, shortName, certificate, date, observations);
+  getData(id: number, image: string, name: string, shortName: string, certificate: string, date: string, observations: string){
+    this.educationData.getData(id, image, name, shortName, certificate, date, observations);
   }
   deleteEducation(id: number) {
     Swal.fire({

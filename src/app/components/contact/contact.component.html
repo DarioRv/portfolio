@@ -7,7 +7,7 @@
           <i [class]="'bi bi-'+contact?.icon"></i>{{contact?.alias}}
         </a>
         <div class="edit-buttons d-flex flex-row gap-2 w-auto" *ngIf="isLogin()">
-          <edit-button routerLink="/edit-contact" (click)="getFormData(contact?.id, contact?.alias, contact?.type, contact?.url, contact?.visible, contact?.icon)"></edit-button>
+          <edit-button routerLink="/edit-contact" (click)="getData(contact?.id, contact?.alias, contact?.type, contact?.url, contact?.visible, contact?.icon)"></edit-button>
           <hide-button (click)="toggleVisibility(contact)" *ngIf="contact?.visible"></hide-button>
           <show-button (click)="toggleVisibility(contact)" *ngIf="!contact?.visible"></show-button>
         </div>

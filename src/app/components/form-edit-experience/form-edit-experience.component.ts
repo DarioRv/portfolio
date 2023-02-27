@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ExperienceDataFormService } from 'src/app/services/experience-form-data.service';
+import { ExperienceDataFormService } from 'src/app/services/experience-data.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import Swal from 'sweetalert2';
 
@@ -17,17 +17,7 @@ export class FormEditExperienceComponent {
   year!: string;
   description!: string;
 
-  private recoveredData: any;
-
-  constructor(private formData: ExperienceDataFormService, private router: Router, private portfolioService: PortfolioDataService){}
-
-  setDataRecovered(data: any) {
-    this.recoveredData = data;
-  }
-
-  getDataRecovered() {
-    return this.recoveredData;
-  }
+  constructor(private experienceData: ExperienceDataFormService, private router: Router, private portfolioService: PortfolioDataService){}
 
   getUrl() {
     return this.router.url;
@@ -35,12 +25,11 @@ export class FormEditExperienceComponent {
 
   ngOnInit(): void {
     if (this.getUrl() == "/edit-experience"){
-      this.setDataRecovered(this.formData.getDataRecovered());
-      this.image = this.recoveredData.companyImage;
-      this.name = this.recoveredData.companyName;
-      this.position = this.recoveredData.position;
-      this.year = this.recoveredData.year;
-      this.description = this.recoveredData.description;
+      this.image = this.experienceData.getDataRecovered().companyImage;
+      this.name = this.experienceData.getDataRecovered().companyName;
+      this.position = this.experienceData.getDataRecovered().position;
+      this.year = this.experienceData.getDataRecovered().year;
+      this.description = this.experienceData.getDataRecovered().description;
     }
   }
 
@@ -74,7 +63,7 @@ export class FormEditExperienceComponent {
     }
     else {
       experience = {...experience,
-        "id": this.formData.getDataRecovered().id,
+        "id": this.experienceData.getDataRecovered().id,
         "companyImage": this.image,
         "companyName": this.name,
         "position": this.position,

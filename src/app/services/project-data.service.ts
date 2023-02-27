@@ -17,7 +17,7 @@ export class ProjectFormDataService {
     return this.dataRecovered;
   }
 
-  getDataForm(id: number, name: string, date: string, description: string, url: string, technologies: string) {
+  getForm(id: number, name: string, date: string, description: string, url: string, technologies: string) {
     const data = {
       id: id,
       projectName: name,

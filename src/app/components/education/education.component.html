@@ -11,7 +11,7 @@
         <div class="observaciones text-white mt-3">{{item.observations}}</div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">
-          <edit-button routerLink="/edit-education" (click)="getFormData(item?.id, item?.institutionImage, item?.institutionName, item?.shortName,item?.certificate, item?.date, item?.observations)"></edit-button>
+          <edit-button routerLink="/edit-education" (click)="getData(item?.id, item?.institutionImage, item?.institutionName, item?.shortName,item?.certificate, item?.date, item?.observations)"></edit-button>
           <delete-button (click)="deleteEducation(item?.id)"></delete-button>
         </div>
     </div>

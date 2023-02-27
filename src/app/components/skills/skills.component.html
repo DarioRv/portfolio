@@ -1,7 +1,13 @@
 <section class="habilidades bg-dark container-fluid d-flex flex-column align-items-center" id="habilidades">
     <h2 class="h2 text-white">Habilidades</h2>
     <div class="skills d-flex flex-wrap justify-content-center gap-4">
-        <div *ngFor="let skill of skills" class="skill d-flex flex justify-content-center align-items-center"><img [src]="'../../../assets/images/' + skill.image" [alt]="skill.name + 'logo'" class="img-fluid"></div>
+        <div *ngFor="let skill of skills" class="skill d-flex flex-column justify-content-center gap-2">
+          <img [src]="'../../../assets/images/' + skill.image" [alt]="skill.name + 'logo'" class="img-fluid">
+          <div class="edit-buttons d-flex gap-1" *ngIf="isLogin()">
+            <edit-button routerLink="/edit-skill" (click)="getData(skill.id, skill.name, skill.image)"></edit-button>
+            <delete-button (click)="deleteSkill(skill.id)"></delete-button>
+          </div>
+        </div>
     </div>
     <add-button routerLink="/add-skill" *ngIf="isLogin()"></add-button>
 </section>

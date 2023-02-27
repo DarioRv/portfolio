@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import { SkillDataService } from 'src/app/services/skill-data.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,24 +11,23 @@ import Swal from 'sweetalert2';
   styleUrls: ['./form-edit-skill.component.css']
 })
 export class FormEditSkillComponent {
+  id!: number;
   image!: string;
   name!: string;
 
-  private recoveredData: any;
-
-  constructor(private router: Router, private portfolioService: PortfolioDataService) { }
-
-
-  setDataRecovered(data: any) {
-    this.recoveredData = data;
-  }
-
-  getDataRecovered() {
-    return this.recoveredData;
-  }
+  constructor(private router: Router, private portfolioService: PortfolioDataService, private skillData: SkillDataService) { }
 
   getUrl() {
     return this.router.url;
+  }
+
+  ngOnInit() {
+    if (this.getUrl() == '/edit-skill') {
+      console.log(this.skillData.getRecoveredData());
+      this.id = this.skillData.getRecoveredData().id;
+      this.image = this.skillData.getRecoveredData().image;
+      this.name = this.skillData.getRecoveredData().name;
+    }
   }
 
   sendForm(form: NgForm) {
@@ -57,6 +57,7 @@ export class FormEditSkillComponent {
     }
     else {
       skill = { ...skill,
+        "id": this.id,
         "image": this.image,
         "name": this.name,
         "idPersona": 1

@@ -1,6 +1,7 @@
 <div class="container-fluid container-form flex-column align-items-center justify-content-center">
   <form class="bg-dark" #skillForm="ngForm" (submit)="sendForm(skillForm)">
-    <h5 class="text-white">Anadir habilidad</h5>
+    <h5 class="text-white" *ngIf="getUrl() == '/add-skill'">Anadir habilidad</h5>
+    <h5 class="text-white" *ngIf="getUrl() == '/edit-skill'">editar habilidad</h5>
     <label for="imagen">Imagen</label>
     <input type="text" name="imagen" autocomplete="off" [(ngModel)]="image">
     <label for="habilidad">habilidad</label>

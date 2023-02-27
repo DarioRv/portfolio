@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ProjectFormDataService } from 'src/app/services/project-form-data.service';
+import { ProjectFormDataService } from 'src/app/services/project-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import Swal from 'sweetalert2';
@@ -17,31 +17,19 @@ export class FormEditProjectComponent {
   url!: string;
   technologies!: string;
 
-  private recoveredData: any;
-
-  constructor(private formData: ProjectFormDataService, private router: Router, private portfolioService: PortfolioDataService) { }
-
-  setDataRecovered(data: any) {
-    this.recoveredData = data;
-  }
-
-  getDataRecovered() {
-    return this.recoveredData;
-  }
+  constructor(private projectData: ProjectFormDataService, private router: Router, private portfolioService: PortfolioDataService) { }
 
   getUrl() {
     return this.router.url;
   }
 
   ngOnInit(): void {
-    if (this.getUrl() == "/edit-project") {
-      this.setDataRecovered(this.formData.getDataRecovered());
-      console.log(this.recoveredData);
-      this.name = this.recoveredData.projectName;
-      this.date = this.recoveredData.date;
-      this.description = this.recoveredData.description;
-      this.url = this.recoveredData.url;
-      this.technologies = this.recoveredData.implementedTechnologies;
+    if (this.getUrl() == '/edit-project') {
+      this.name = this.projectData.getDataRecovered().projectName;
+      this.date = this.projectData.getDataRecovered().date;
+      this.description = this.projectData.getDataRecovered().description;
+      this.url = this.projectData.getDataRecovered().url;
+      this.technologies = this.projectData.getDataRecovered().implementedTechnologies;
     }
   }
 
@@ -75,7 +63,7 @@ export class FormEditProjectComponent {
     }
     else {
       project = {...project,
-        "id": this.formData.getDataRecovered().id,
+        "id": this.projectData.getDataRecovered().id,
         "projectName": this.name,
         "date": this.date,
         "description": this.description,
