@@ -10,13 +10,23 @@ import { SkillDataService } from 'src/app/services/skill-data.service';
 	styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-	skills: any;
+	frontEndSkills: any;
+  backEndSkills: any;
+  othersSkills: any;
 
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private skillData: SkillDataService){}
 
 	ngOnInit(): void{
 		this.portfolioData.getData().subscribe(data => {
-			this.skills = data.skills;
+      this.frontEndSkills = data.skills.filter((skill: any) => {
+        return skill.type === 'front';
+      });
+      this.backEndSkills = data.skills.filter((skill: any) => {
+        return skill.type === 'back';
+      });
+      this.othersSkills = data.skills.filter((skill: any) => {
+        return skill.type === 'others';
+      });
 		});
 	}
 
@@ -28,8 +38,8 @@ export class SkillsComponent implements OnInit {
 		this.loginService.logout();
 	}
 
-  getData(id: number, name: string, image: string) {
-    this.skillData.getData(id, name, image);
+  getData(id: number, name: string, image: string, type: string) {
+    this.skillData.getData(id, name, image, type);
   }
 
   deleteSkill(id: number) {

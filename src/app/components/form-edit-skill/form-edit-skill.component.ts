@@ -14,6 +14,7 @@ export class FormEditSkillComponent implements OnInit {
   id!: number;
   image!: string;
   name!: string;
+  type!: string;
 
   constructor(private router: Router, private portfolioService: PortfolioDataService, private skillData: SkillDataService) { }
 
@@ -23,10 +24,10 @@ export class FormEditSkillComponent implements OnInit {
 
   ngOnInit() {
     if (this.getUrl() == '/edit-skill') {
-      console.log(this.skillData.getRecoveredData());
       this.id = this.skillData.getRecoveredData().id;
       this.image = this.skillData.getRecoveredData().image;
       this.name = this.skillData.getRecoveredData().name;
+      this.type = this.skillData.getRecoveredData().type;
     }
   }
 
@@ -45,6 +46,7 @@ export class FormEditSkillComponent implements OnInit {
       skill = { ...skill,
         "image": this.image,
         "name": this.name,
+        "type": this.type,
         "idPersona": 1
       }
       this.portfolioService.addNewSkill(skill).subscribe();
@@ -60,6 +62,7 @@ export class FormEditSkillComponent implements OnInit {
         "id": this.id,
         "image": this.image,
         "name": this.name,
+        "type": this.type,
         "idPersona": 1
       }
       this.portfolioService.editSkill(skill).subscribe();

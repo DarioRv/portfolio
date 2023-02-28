@@ -16,11 +16,12 @@ export class SkillDataService {
     return this.recoveredData;
   }
 
-  getData(id: number, name: string, image: string) {
+  getData(id: number, name: string, image: string, type: string) {
     const data = {
       id: id,
       name: name,
-      image: image
+      image: image,
+      type: type
     }
     this.setRecoveredData({...data});
   }

@@ -3,13 +3,24 @@
   margin: 40px 0;
 }
 
-.habilidades .skills .skill {
+.habilidades .skills-container {
+  width: 500px;
   background-color: #2e3031;
+  border-radius: 10px;
+}
+
+.habilidades .skills .skill {
   width: 100px;
-  height: 100px;
+  height: auto;
   border-radius: 10px;
   padding: 15px;
+  background-color: rgba(29, 30, 31, 0.623);
 }
+
+.habilidades .skills .skill img {
+  width: 100%;
+}
+
 .habilidades add-button {
   width: 80%;
   display: flex;
