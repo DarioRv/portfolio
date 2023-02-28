@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
@@ -18,7 +18,7 @@ export class SafePipe implements PipeTransform {
 	templateUrl: './projects.component.html',
 	styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 	projects: any;
   loadedData: boolean = false;
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private projectData: ProjectFormDataService){}

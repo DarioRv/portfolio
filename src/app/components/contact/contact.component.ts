@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
 import { ContactFormDataService } from 'src/app/services/contact-data.service';
@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   contacts: any;
   address!: string;
 

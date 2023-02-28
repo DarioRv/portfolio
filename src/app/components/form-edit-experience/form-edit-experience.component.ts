@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ExperienceDataFormService } from 'src/app/services/experience-data.service';
@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   templateUrl: './form-edit-experience.component.html',
   styleUrls: ['./form-edit-experience.component.css']
 })
-export class FormEditExperienceComponent {
+export class FormEditExperienceComponent implements OnInit {
   image!: string;
   name!: string;
   position!: string;

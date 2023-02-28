@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import Swal from 'sweetalert2';
@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
   templateUrl: './form-edit-personal-data.component.html',
   styleUrls: ['./form-edit-personal-data.component.css']
 })
-export class FormEditPersonalDataComponent {
+export class FormEditPersonalDataComponent implements OnInit {
   id!: number;
   name!: string;
   position!: string;

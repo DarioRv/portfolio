@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
 import { ExperienceDataFormService } from 'src/app/services/experience-data.service';
@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 	templateUrl: './experience.component.html',
 	styleUrls: ['./experience.component.css']
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
   loadedData: boolean = false;
 	laboralExperience: any;
 
@@ -29,6 +29,10 @@ export class ExperienceComponent {
 
   getData(id: number, image: string, companyName: string, position: string, description: string, year: string){
     this.experienceData.getForm(id, image, companyName, position, description, year);
+  }
+
+  esUltimoItem(item: any, lista: any) {
+    return JSON.stringify(item) === JSON.stringify(lista[lista.length - 1]);
   }
 
   deleteLaboralExperience(id: number) {

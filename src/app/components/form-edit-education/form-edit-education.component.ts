@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EducationFormDataService } from 'src/app/services/education-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './form-edit-education.component.html',
   styleUrls: ['./form-edit-education.component.css']
 })
-export class FormEditEducationComponent {
+export class FormEditEducationComponent implements OnInit {
 
   image!: string;
   name!: string;

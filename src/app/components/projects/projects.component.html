@@ -13,12 +13,8 @@
               </div>
             </div>
             <div class="links d-flex gap-1">
-              <button>
-                <a [href]="project.url" target="_blank"><i class="bi bi-globe-americas"></i> Ir al sitio</a>
-              </button>
-              <button>
-                <a [href]="project.url" target="_blank"><i class="bi bi-github"></i> Ver código</a>
-              </button>
+                <a [href]="project.webSiteUrl" target="_blank"><i class="bi bi-globe-americas"></i> Ir al sitio</a>
+                <a [href]="project.codeUrl" target="_blank"><i class="bi bi-github"></i> Ver código</a>
             </div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">

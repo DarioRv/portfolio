@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
 import { EducationFormDataService } from 'src/app/services/education-data.service';
@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 	templateUrl: './education.component.html',
 	styleUrls: ['./education.component.css']
 })
-export class EducationComponent {
+export class EducationComponent implements OnInit {
 
   education: any;
   loadedData: boolean = false;

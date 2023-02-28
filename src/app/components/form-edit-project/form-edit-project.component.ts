@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProjectFormDataService } from 'src/app/services/project-data.service';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './form-edit-project.component.html',
   styleUrls: ['./form-edit-project.component.css']
 })
-export class FormEditProjectComponent {
+export class FormEditProjectComponent implements OnInit {
   name!: string;
   date!: string;
   description!: string;

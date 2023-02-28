@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContactFormDataService } from 'src/app/services/contact-data.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   templateUrl: './form-edit-contact.component.html',
   styleUrls: ['./form-edit-contact.component.css']
 })
-export class FormEditContactComponent {
+export class FormEditContactComponent implements OnInit {
   alias!: string;
   icon!: string;
   url!: string;

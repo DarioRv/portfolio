@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   templateUrl: './form-edit-skill.component.html',
   styleUrls: ['./form-edit-skill.component.css']
 })
-export class FormEditSkillComponent {
+export class FormEditSkillComponent implements OnInit {
   id!: number;
   image!: string;
   name!: string;

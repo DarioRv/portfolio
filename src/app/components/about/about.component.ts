@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 
@@ -7,7 +7,7 @@ import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
 
   nacionality!: string;
   age!: string;

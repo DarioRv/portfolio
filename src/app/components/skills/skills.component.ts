@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
 import { LoginService } from 'src/app/services/login.service';
 import Swal from 'sweetalert2';
@@ -9,7 +9,7 @@ import { SkillDataService } from 'src/app/services/skill-data.service';
 	templateUrl: './skills.component.html',
 	styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
 	skills: any;
 
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private skillData: SkillDataService){}

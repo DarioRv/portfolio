@@ -17,18 +17,18 @@
   font-size: 1.6rem;
 }
 
-.proyectos .proyecto .detalles button {
+.proyectos .proyecto .detalles a {
   background-color: #212529;
   padding: 5px 15px;
   border: none;
   border-radius: 25px;
 }
 
-.proyectos .proyecto .detalles button:hover {
+.proyectos .proyecto .detalles a:hover {
   background-color: #f44769;
 }
 
-.proyectos .proyecto .detalles button a {
+.proyectos .proyecto .detalles a {
   color: #fff;
   text-decoration: none;
 }

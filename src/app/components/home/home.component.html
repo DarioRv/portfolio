@@ -1,22 +1,18 @@
-<section class="inicio vh-100 bg-dark container-fluid d-flex flex-column justify-content-center align-items-center" id="top">
-    <h1 class="h1 fs-lg-6 display-1 m-0">{{name}}</h1>
-    <p class="text-white fs-4">{{position}}</p>
-    <div class="contacto d-flex flex-column flex-lg-row align-items-center align-items-lg-start gap-3">
-        <div class="telefono text-white d-flex gap-1">
-            <i class="bi bi-telephone-fill"></i>
-            <span><a [href]="telUrl" target="_blank">{{tel}}</a></span>
-        </div>
-        <div class="email text-white d-flex gap-1">
-            <i class="bi bi-envelope-fill"></i>
-            <span><a [href]="emailUrl" target="_blank">{{emailAddress}}</a></span>
-        </div>
-        <div class="linkedin text-white d-flex gap-1">
-            <i class="bi bi-linkedin"></i>
-            <span><a [href]="linkedinUrl" target="_blank">{{linkedinAlias}}</a></span>
-        </div>
-        <div class="github text-white d-flex gap-1">
-          <i class="bi bi-github"></i>
-          <span><a [href]="githubUrl" target="_blank">{{githubAlias}}</a></span>
-      </div>
+<section class="inicio vh-100 bg-dark container-fluid d-flex flex-column flex-lg-row justify-content-evenly align-items-center" id="top">
+  <div class="d-flex flex-column align-items-center align-items-lg-start">
+    <span class="text-white fs-4">Hola, mi nombre es</span>
+    <h1 class="h1 fs-lg-6 display-1 m-0 text-start">{{name}}</h1>
+    <p class="text-white fs-4">Y soy <span class="position"></span></p>
+    <div class="contacto d-flex flex-row justify-content-center justify-content-lg-start align-items-center align-items-lg-start gap-3">
+        <a [href]="telUrl" target="_blank" class="text-white"><i class="bi bi-telephone-fill"></i></a>
+        <a [href]="emailUrl" target="_blank" class="text-white"><i class="bi bi-envelope-fill"></i></a>
+        <a [href]="linkedinUrl" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a>
+        <a [href]="githubUrl" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
+
     </div>
+    <a href="#" class="download-cv text-white text-decoration-none">Descargar CV</a>
+  </div>
+  <div class="">
+    <img src="../../../assets/images/angular.png" alt="" width="400">
+  </div>
 </section>
