@@ -25,21 +25,21 @@ export class HomeComponent implements OnInit {
 			this.position = data.personalData.position;
 			this.description = data.personalData.description;
       data.contact.forEach((contact: any) => {
-        if (contact.type == "tel") {
+        if (contact.type == 'tel') {
           this.telUrl = contact.url;
         }
-        if (contact.type == "email") {
+        if (contact.type == 'email') {
           this.emailUrl = contact.url;
 
         }
-        if (contact.type == "linkedin") {
+        if (contact.type == 'linkedin') {
           this.linkedinUrl = contact.url;
         }
-        if (contact.type == "github") {
+        if (contact.type == 'github') {
           this.githubUrl = contact.url;
         }
       });
-      let typed = new Typed(".position", {
+      let typed = new Typed('.position', {
         strings: [this.position],
         typeSpeed: 100,
         backSpeed: 100,
