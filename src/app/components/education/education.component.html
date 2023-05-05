@@ -7,7 +7,7 @@
             <h3 class="">{{item.institutionName | titlecase}}</h3>
           </div>
         <h4 class="text-white">{{item.certificate | titlecase}}</h4>
-        <span class="text-white">{{item.date}}</span>
+        <span class="text-muted">{{item.date}}</span>
         <div class="observaciones text-white mt-3">{{item.observations}}</div>
         </div>
         <div class="edit-buttons d-flex flex-row flex-lg-column gap-2" *ngIf="isLogin()">

@@ -2,12 +2,17 @@
   background-color: #2e3031;
   width: 80%;
   margin: 20px 0;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
   padding: 20px 15px;
+  border-left: 10px solid #1DB954;
+}
+
+.estudios .formacion .instituto {
+  margin-bottom: 20px;
 }
 
 .estudios .formacion .instituto h3 {
-  color: #f44769;
+  color: #fff;
 }
 
 .estudios .formacion .instituto .logo {
