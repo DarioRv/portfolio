@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioDataService {
 
-  private readonly API = 'http://localhost:8080';
+  private readonly API = 'https://portfolio-api-8cn8.onrender.com';
 
   constructor(private http: HttpClient) { }
 

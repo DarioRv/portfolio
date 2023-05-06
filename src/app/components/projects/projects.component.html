@@ -1,7 +1,7 @@
 <section class="proyectos bg-dark container-fluid d-flex flex-column align-items-center" id="proyectos" *ngIf="loadedData">
     <h2 class="h2 text-white">Proyectos</h2>
     <div class="lista justify-content-center justify-content-xl-between">
-    <div *ngFor="let project of projects.reverse()" class="proyecto d-flex flex-column flex-md-row justify-content-md-between gap-5 shadow">
+    <div *ngFor="let project of projects" class="proyecto d-flex flex-column flex-md-row justify-content-md-between gap-5 shadow">
         <div class="detalles text-white">
             <h3>{{project.projectName | uppercase}}</h3>
             <h4 class="text-muted">{{project.date}}</h4>

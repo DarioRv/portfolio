@@ -23,8 +23,8 @@ export class ProjectsComponent implements OnInit {
   loadedData: boolean = false;
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private projectData: ProjectFormDataService){}
 	ngOnInit(): void{
-		this.portfolioData.getData().subscribe(data => {
-			this.projects = data.projects;
+		this.portfolioData.getData().subscribe((data:any) => {
+			this.projects = data.projects.reverse();
       this.loadedData = true;
 		});
 	}

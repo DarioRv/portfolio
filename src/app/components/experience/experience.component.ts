@@ -16,8 +16,8 @@ export class ExperienceComponent implements OnInit {
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private experienceData: ExperienceDataFormService){}
 
 	ngOnInit(): void{
-		this.portfolioData.getData().subscribe(data => {
-			this.laboralExperience = data.laboralExperience;
+		this.portfolioData.getData().subscribe((data:any) => {
+			this.laboralExperience = data.laboralExperience.reverse();
       this.loadedData = true;
 		});
 

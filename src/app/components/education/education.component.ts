@@ -17,8 +17,8 @@ export class EducationComponent implements OnInit {
 	constructor(private portfolioData: PortfolioDataService, private loginService: LoginService, private educationData: EducationFormDataService){}
 
 	ngOnInit(): void{
-		this.portfolioData.getData().subscribe(data => {
-			this.education = data.education;
+		this.portfolioData.getData().subscribe((data:any) => {
+			this.education = data.education.reverse();
       this.loadedData = true;
 		});
 	}
